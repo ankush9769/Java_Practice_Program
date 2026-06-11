@@ -17,7 +17,7 @@ class AreaCalculatormethod{
 public class AreaCalculator extends AreaCalculatormethod{
     public static void main(String[] args){
         AreaCalculator obj = new AreaCalculator();
-        obj.areaCalculate(5.0);       
+        obj.areaCalculate(5.0);
         obj.areaCalculate(10.0, 20.0);
         obj.areaCalculate(7.0f);
         obj.areaCalculate(5.0f, 8.0f);
