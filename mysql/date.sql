@@ -53,3 +53,5 @@ select date_sub(current_date(),interval 7 day);
 /*timestampdiff its a date time function used to calculated difference between two dates ro timestamps in a specified unit */
 
 /*dept it salray>50000 comming form mumbai or pune join in 2025*/
+
+
