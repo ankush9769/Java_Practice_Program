@@ -80,12 +80,7 @@ select * from emp  as e join dept as d on e.eid = d.eid where salary > (select a
 select * from emp as e where price > (select avg(e.salary) from emp);
 
 
-/*CTE common table expression */
-with department_avg
-as
-(
- select dept,avg(salary) as avg_salary from emp group by department
-)
+
 
 /*difference betwen exists and joins*/
 /*mysql 8.0 optimizer
@@ -98,7 +93,110 @@ select dname ,count(*) from dept group by dname;
 create view custemer_view as
 select oname,price from orders;
 
+create view emp_view as
+select name,id,salary from emp;
+update emp_view set name='hell' where id=102;
+-- drop view emp_view;
+/*View-only can access the existing field of the table. */
+/*If actual fields are not present in the table then it can't be accessible to the view. */
+select * from emp;
+select * from emp_view;
+
+alter table emp add column salary decimal(10,2);
+alter view emp_view as select name,id,salary from emp;/*altering the view */
+insert into emp_view values('shreya',123,20000);
 select * from custemer_view;
-select ename,salary,(select avg(salary)from emp) as avg_salary from emp;/*subqurey in select cluose*/
+select ename,salary,(select avg(salary)from emp) as avg_salary from emp;/*subqurey in select clause*/
 select * from (select dept,avg(salary) as avg_salary from emp group by dept)as derivedtable;/*subquery from cluase*/
 
+
+/*temp table*/
+create temporary table temptable(id int,name varchar(100));
+desc temptable;
+/*View stores query and temporary table stores entire data.*/
+
+create or replace temporary table emp_temp
+as
+select id,name,salary from emp;
+
+select  * from emp_temp;
+insert into emp_temp values(122,'bhai',8989);
+select * from emp;
+
+
+create table sales(id int primary key auto_increment,city varchar(100));
+INSERT INTO sales (city) VALUES 
+('New York'),
+('London'),
+('Tokyo'),
+('Paris'),
+('Sydney'),
+('Mumbai');
+create temporary table sales_temp
+as
+select * from sales;
+select * from sales_temp;
+update sales_temp set city='york' where city='New York';
+insert into sales(city) select city from sales_temp where city='york';  /*Add the changed temp table data into the original table. */
+
+
+/*CTE common table expression */
+with department_avg
+as
+(
+ select dept,avg(salary) as avg_salary from emp group by department
+)
+
+-- cte are widly use in 
+-- 1 reporting query
+-- 2 ccomplex sql simplyfication
+-- 3 recorsive queries 
+-- 4 banking and ERP application 
+-- cte is temporary name resultset that exist only duering execution of the query 
+
+with dept_salary
+as
+(select department, AVG(salary) as avg_salary from emp group by department ) , high_salary as (select * from department, salary where avg_salary>60000 ));
+select * from high_salary;
+
+select * from emp;
+-- UPDATE emp
+-- SET salary =
+--     CASE id
+--         WHEN 101 THEN 50000
+--         WHEN 102 THEN 55000
+--         WHEN 103 THEN 60000
+--         WHEN 104 THEN 65000
+--         WHEN 105 THEN 70000
+--     END;
+
+select name,salary,row_number() over(order by salary desc) as salary_coloumn from emp;
+select name,salary,dense_rank() over(order by salary desc) as salary_coloumn from emp;
+select * from emp;
+
+-- ALTER TABLE emp
+-- ADD dept VARCHAR(20);
+-- UPDATE emp
+-- SET dept =
+--     CASE id
+--         WHEN 101 THEN 'HR'
+--         WHEN 102 THEN 'IT'
+--         WHEN 103 THEN 'Finance'
+--         WHEN 104 THEN 'Sales'
+--         WHEN 105 THEN 'Marketing'
+--     END;
+
+select name,salary,dept,row_number() over(partition by dept order by salary desc) as RN_dence from emp;
+
+-- highest paid emp department wise
+with highestsalary as( 
+select name,salary,dept,row_number() over(partition by dept order by salary desc) as RN_dence from emp
+)
+select * from highestsalary where RN_dence=1;
+
+-- Top three earners in each department.
+-- find duplicate of the records (subquery with from clause)
+select *,row_number() over(partition by dept order by id) as hello from emp where row_number>1;
+-- windows function perform caluculation across related those without collapsing data .row_number gives unique number
+-- rang() allows ties and skips rank , while dense_rank allows ties without skipping rank
+-- these are basically use for ranking top an analysis ,duplication, reporting

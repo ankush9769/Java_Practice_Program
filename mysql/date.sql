@@ -55,3 +55,4 @@ select date_sub(current_date(),interval 7 day);
 /*dept it salray>50000 comming form mumbai or pune join in 2025*/
 
 
+
