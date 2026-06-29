@@ -208,19 +208,27 @@ call orderPlace(101,40);
      
      
      
-        
-        
+     
+use ankush;
+create table user(uid int primary key auto_increment, amount decimal(10,2) not null);
+insert into user(amount) values(20000),(30000),(40000),(50000);
+select * from user;
+select * from fake;
 
+create table fake(id int primary key auto_increment,cliend_id int,mess varchar(100),time_of_fraud datetime);
+insert into user(amount) values(null);
 
+delimiter //
+create procedure fraundinsert(in cid int,in amounts decimal(10,2))
+begin
+     declare CONTINUE handler for 1048
+     begin
+          insert into fake(cliend_id,mess,time_of_fraud) values(cid,'fake amount',now());
+     END;
+     insert into user(uid,amount) values(cid,amounts);
+     select 'success' as message;
+END //
+delimiter ;     
 
-
-
-
-
-
-
-
-
-
-
- 
+call fraundinsert(101,null);
+call fraundinsert(102,50000);
