@@ -633,6 +633,6 @@ select @status;
 
 
 set @sequence = 100
-genrateinvoice("inv",@sequence,@invoicno)
+genrateinvoice(in"inv",inout@sequence,inout@invoicno)
 eg..    inv-2026-00100
-    inv-2026-00101
+         inv-2026-00101
