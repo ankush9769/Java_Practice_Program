@@ -366,14 +366,273 @@ END //
 delimiter ;
 call performance_inc();
 
-
-
-
+use ankush;
+select * from orders2;
 -- problem statment
 -- we have orders2 table
 -- generat monthly sales report
 -- month wise no. of item sold and sum of the total amount..........  arg(year)
 
 
+-- delimiter //
+-- create procedure sale(in year int)
+-- begin
+--      select count(id) as total_order,sum(total_amount) as total_sales 
+--      from orders2 where year(order_date)year group by month_of_order_date;
+-- END //
+-- delimiter ;
 
-  
+select * from orders2;
+delimiter //
+create procedure monthly_sal(In O_year year)
+begin
+SELECT
+    MONTH(order_date) AS month,
+    COUNT(order_id) AS total_orders,
+    SUM(total_amount) AS total_sales
+FROM orders2
+WHERE YEAR(order_date) = O_year
+GROUP BY MONTH(order_date)
+ORDER BY MONTH(order_date);
+end //
+delimiter ;
+call monthly_sal(2026);
+
+
+
+select * from orders2;
+select * from customers;
+delimiter //
+create or replace procedure topsalecustomer(in limits int)
+begin
+     select c.customer_id,c.customer_name,sum(o.total_amount) as total_sum_amount
+     from customers as c join orders2 as o on c.customer_id = o.customer_id
+     group by customer_id order by total_sum_amount desc limit limits;
+END //     
+delimiter ;
+
+call topsalecustomer(3);
+
+
+
+select * from products;
+delimiter //
+create procedure c_price_incre(in c_id int,in incr decimal(10,2))
+begin
+     update products set price = price + (price*incr) where category_id = c_id;
+END //
+delimiter ;
+
+call c_price_incre(1,0.1);
+
+
+
+select * from orders2;
+select * from order_logs;
+delimiter //
+create procedure orderplace1(in c_id int,in amount decimal(10,2))
+begin
+
+     declare exit handler for sqlexception
+     begin
+          rollback;
+          resignal;
+     END;
+     start transaction;
+     begin
+     declare last_orderid int;
+     insert into orders2(customer_id,order_date,total_amount,status) 
+     values(c_id,now(),amount,'PLACED');
+     set last_orderid = last_insert_id();
+     
+     insert into order_logs(order_id,log_message,created_at)
+     values(last_orderid,'order placed successfull',now());
+     commit;
+     end;
+END //     
+delimiter ;
+call orderplace1(2,5000);
+
+
+
+
+-- Problem statement 1. 
+-- Cancel Order and Restock Order (orders2,order_items ,products)
+
+
+-- Problem statement 2.
+-- Delete the records from the main table before 20th Jan. 
+-- And take a log in an order archive. 
+select * from orders_archive;
+select * from orders2;
+set sql_safe_updates=0;
+delimiter //
+create or replace procedure deleteandinsert(in dates date)
+begin
+     declare exit handler for sqlexception
+     begin
+         rollback;
+         resignal;
+     end;
+     start transaction;
+     begin
+     insert into orders_archive(order_id,customer_id,order_date,total_amount,status)
+      select order_id,customer_id,order_date,total_amount,status from orders2 where order_date < dates;
+      
+      delete from orders2 where order_date < dates;
+      commit;
+      end;
+      
+END //
+delimiter ;
+call deleteandinsert('2026-11-02');
+
+
+
+
+select * from users;
+delimiter //
+create procedure logincheck(in emailcheck varchar(100))
+begin
+     select user_id,email,status,
+     case 
+         when status = 'active' then 'login allowed'
+         else 'login block'
+     END as login_status 
+     from users where email = emailcheck;
+END //
+delimiter ;
+
+call logincheck('active.user@example.com');
+call logincheck('blocked.user@example.com');
+
+
+
+
+select * from employees;
+delimiter //
+create procedure getsalary(in eid int ,out sal decimal(10,2))
+begin
+     select salary into sal from employees where employee_id = eid;
+END //
+delimiter ;  
+call getsalary(1,@sal);   
+select @sal;
+
+
+-- Ifnull-functional. 
+
+
+
+-- Problem statement 
+-- in d_id,
+-- out d wise total salary,avg(salary),max,min salary 
+-- if If any of them are null then replace with zero. 
+select * from departments;
+select * from employees;
+delimiter //
+create or replace procedure dept_wisesal_statics(
+in dept_id int ,out totalsal decimal(10,2),out avgsal decimal(10,2),out maxsal decimal(10,2),out minsal decimal(10,2))
+begin
+     select ifnull(sum(salary),0),
+     ifnull(avg(salary),0),
+     ifnull(max(salary),0),
+     ifnull(min(salary),0) into totalsal,avgsal,maxsal,minsal from employees where department_id = dept_id;
+END //
+delimiter ;
+
+call dept_wisesal_statics(1,@totalsal,@avgsal,@maxsal,@minsal);
+select @totalsal,@avgsal,@maxsal,@minsal;
+     
+     
+     
+select * from employees;
+delimiter //
+create or replace procedure addemp(
+in ename varchar(100),
+in eemail varchar(100),
+in dept_id int,
+in sal decimal(10,2),
+out lastid int)
+begin
+     insert into employees(name,email,department_id,salary)
+     values(ename,eemail,dept_id,sal);
+     set lastid = last_insert_id();
+END //
+delimiter ;    
+
+call addemp('yashu','yash@gmail.com',1,23000,@lastid); 
+select @lastid;
+
+
+
+
+
+
+-- INOUT parameter
+delimiter //
+create or replace procedure discount(in dis decimal(10,2),inout amount decimal(10,2))
+begin
+    set amount = amount - (amount * dis);
+END //
+delimiter ;
+
+set @amount = 10000;
+call discount(0.1,@amount);
+select @amount;
+
+
+
+
+delimiter //
+create or replace procedure stringoperation(inout pname varchar(100))
+begin
+     set pname = trim(pname);
+     set pname = concat(upper(left(pname,1)),lower(substring(pname,2)));
+END //
+delimiter ;
+set @pname = '  ankush pal ';
+call stringoperation(@pname);
+select @pname;
+
+
+
+
+-- pagination
+delimiter //
+create or replace procedure pagination(in current_page int,in total_record int)
+begin
+     declare start int;
+     declare end int;
+     set start =((current_page-1) * total_record)+1;
+     set end = (current_page) * total_record;
+     select start,end;
+END //
+delimiter ;
+     
+call pagination(3,10);
+
+
+
+
+delimiter //
+create or replace procedure atm(in max_retry int,inout retry_count int,inout status varchar(100))
+begin
+set retry_count = retry_count + 1;
+     if max_retry>retry_count then
+        set status = 'allowed';
+     else set status = 'not allowed';  
+     END if;
+END //
+delimiter ;
+
+set @retry=1;
+call atm(5,@retry,@status);
+select @retry;
+select @status;
+
+
+set @sequence = 100
+genrateinvoice("inv",@sequence,@invoicno)
+eg..    inv-2026-00100
+    inv-2026-00101
