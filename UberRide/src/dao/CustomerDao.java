@@ -2,11 +2,14 @@ package dao;
 
 import config.DatabaseConnection;
 import model.Customer;
+import model.Driver;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CustomerDao {
     public Customer create(String name,String email,String phone,String passwordHash) throws SQLException {
@@ -53,6 +56,19 @@ public class CustomerDao {
                 resultSet.getString("email"),
                 resultSet.getString("phone")
         );
+    }
+
+    public List<Customer> findAll() throws SQLException{
+        String sql = "select * from drivers customers by created_at desc";
+        List<Customer> customers = new ArrayList<>();
+        try(Connection connection = DatabaseConnection.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql);
+            ResultSet resultSet = statement.executeQuery()){
+            while (resultSet.next()){
+                customers.add(map(resultSet));
+            }
+        }
+        return customers;
     }
 
     public Customer findByEmailAndPassword(String email,String password) throws SQLException

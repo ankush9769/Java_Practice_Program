@@ -3,7 +3,9 @@ package service;
 import dao.AdminDao;
 import dao.CustomerDao;
 import dao.DriverDao;
+import model.Admin;
 import model.Customer;
+import model.Driver;
 import util.PasswordUtil;
 
 import java.sql.SQLException;
@@ -27,6 +29,23 @@ public class AuthService {
     {
         return customerDao.findByEmailAndPassword(email,PasswordUtil.hash(password));
     }
+
+    public Driver registerDriver(String name,String email,String phone,String password,
+                                 String vehicleNo,String currentLocaion)throws SQLException
+    {
+        return driverDao.create(name,email,phone, PasswordUtil.hash(password),vehicleNo,currentLocaion);
+    }
+    public Driver loginDriver(String email,String password)throws SQLException
+    {
+        return driverDao.findByEmailAndPassword(email,PasswordUtil.hash(password));
+    }
+
+    public Admin loginAdmin(String email, String password)throws SQLException
+    {
+        return adminDao.findByEmailAndPassword(email,PasswordUtil.hash(password));
+    }
+
+
 
 
 
