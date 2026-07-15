@@ -1,0 +1,50 @@
+logger
+______
+
+logging is recording application event while application running instead of printing messages with sout() we use
+
+logger.info("user{}logger.in",username)
+
+
+logging records 
+1) error
+2) warnnings
+3) business event
+4) performance information
+5) security events into files or monitoring system
+
+java logging framework
+java.util.logging(JUL)
+apachelogg4J
+Logback 
+most spring boot application use [SLF4J + logback]
+
+what is SLF4J => Simple logging fasade for java
+          |
+          ^
+    logback,log4J
+the word fasade does mean perform logging it provides a common API
+even if implementation changes our code does not get affected
+
+#logging levels
+    level    perpuse                      eg..
+1. trace   = most details               = every loop iteration
+2. debudge = developer debudgin         = sql generated
+3. info    = normal business event      = user login
+4. warn    = unexcepted event but application continues = retrying an action
+5. error   = failiur of the application =  database connection fail
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

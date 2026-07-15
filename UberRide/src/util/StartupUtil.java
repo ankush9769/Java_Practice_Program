@@ -14,6 +14,7 @@ import service.RideService;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class StartupUtil {
     private final Scanner scanner = new Scanner(System.in);
@@ -25,6 +26,7 @@ public class StartupUtil {
 
     public void start(){
         while(true){
+
             System.out.println("\n Uber ride application");
             System.out.println("1. customer register");
             System.out.println("2. Customer login");

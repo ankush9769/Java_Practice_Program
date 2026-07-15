@@ -1,0 +1,805 @@
+2026-07-15 11:22:21 [main] TRACE org.springframework.core.io.support.SpringFactoriesLoader - Loaded [org.springframework.boot.autoconfigure.preinitialize.BackgroundPreinitializer] names: [org.springframework.boot.autoconfigure.preinitialize.CharsetsBackgroundPreinitializer, org.springframework.boot.autoconfigure.preinitialize.ConversionServiceBackgroundPreinitializer]
+2026-07-15 11:22:21 [main] TRACE org.springframework.core.io.support.SpringFactoriesLoader - Loaded [org.springframework.boot.ApplicationContextFactory] names: []
+2026-07-15 11:22:21 [main] TRACE org.springframework.core.io.support.SpringFactoriesLoader - Loaded [org.springframework.boot.ApplicationContextFactory] names: []
+2026-07-15 11:22:21 [main] TRACE org.springframework.core.io.support.SpringFactoriesLoader - Loaded [org.springframework.core.io.ProtocolResolver] names: [org.springframework.boot.io.Base64ProtocolResolver]
+2026-07-15 11:22:21 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 26.0.1 with PID 8816 (C:\Users\Ashish Yadav\Desktop\ankush workspace\Java_Practice_Program\ankushspring\demo\target\classes started by Ashish Yadav in C:\Users\Ashish Yadav\Desktop\ankush workspace\Java_Practice_Program\ankushspring)
+2026-07-15 11:22:21 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-15 11:22:21 [main] INFO  com.example.demo.DemoApplication - The following 1 profile is active: "uat"
+2026-07-15 11:22:21 [main] DEBUG org.springframework.boot.SpringApplication - Loading source class com.example.demo.DemoApplication
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.support.RandomValuePropertySourceEnvironmentPostProcessor - RandomValuePropertySource add to Environment
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor - Post-processing environment to add config data
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Building config data environment contributors
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'configurationProperties'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'systemProperties'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'systemEnvironment'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'random'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'applicationInfo'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Adding initial config data import from locations [optional:file:./;optional:file:./config/;optional:file:./config/*/]
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Adding initial config data import from locations [optional:classpath:/;optional:classpath:/config/]
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Processing initial config data environment contributors without activation context
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironmentContributors - Processing imports for phase BEFORE_PROFILE_ACTIVATION. no activation context
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironmentContributors - Processing imports [optional:file:./;optional:file:./config/;optional:file:./config/*/]
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./application.yaml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./application.yml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./application.xml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./application.properties
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./config/application.yaml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./config/application.yml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./config/application.xml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./config/application.properties
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataImporter - Considering resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataLoaders - Loading file [.] using loader org.springframework.boot.context.config.StandardConfigDataLoader
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataImporter - Loaded resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironmentContributors - Imported 1 resource [file [.]]
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironmentContributors - Processing imports [optional:classpath:/;optional:classpath:/config/]
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/application.yaml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/application.yml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/application.xml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yaml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/config/application.xml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/config/application.properties
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataImporter - Considering resource class path resource [application.properties] from location optional:classpath:/;optional:classpath:/config/
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataLoaders - Loading class path resource [application.properties] using loader org.springframework.boot.context.config.StandardConfigDataLoader
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataImporter - Loaded resource class path resource [application.properties] from location optional:classpath:/;optional:classpath:/config/
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironmentContributors - Imported 1 resource [class path resource [application.properties]]
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironmentContributors - Processed imports for of 2 contributors
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Creating config data activation context from initial contributions
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Processing config data environment contributors with initial activation context
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironmentContributors - Processing imports for phase BEFORE_PROFILE_ACTIVATION. [ConfigDataActivationContext@736caf7a cloudPlatform = [null], profiles = [null]]
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironmentContributors - Processed imports for of 0 contributors
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Deducing profiles from current config data environment contributors
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Processing config data environment contributors with profile activation context
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironmentContributors - Processing imports for phase AFTER_PROFILE_ACTIVATION. [ConfigDataActivationContext@4ce7fffa cloudPlatform = [null], profiles = [Profiles@497486b3 active = '[uat]', default = '[default]', accepted = '[uat]']]
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironmentContributors - Processing imports [optional:file:./;optional:file:./config/;optional:file:./config/*/]
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./application.yaml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./application.yml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./application.xml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./application.properties
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./config/application.yaml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./config/application.yml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./config/application.xml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./config/application.properties
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./application-uat.yaml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./application-uat.yml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./application-uat.xml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./application-uat.properties
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./config/application-uat.yaml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./config/application-uat.yml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./config/application-uat.xml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource file:./config/application-uat.properties
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataImporter - Considering resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataImporter - Already loaded resource file [.] ignoring location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataImporter - Considering resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataImporter - Already loaded resource file [.] ignoring location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironmentContributors - Nothing imported
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironmentContributors - Processing imports [optional:classpath:/;optional:classpath:/config/]
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/application.yaml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/application.yml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/application.xml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yaml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/config/application.xml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/config/application.properties
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/application-uat.yaml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/application-uat.yml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/application-uat.xml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/config/application-uat.yaml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/config/application-uat.yml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/config/application-uat.xml
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.StandardConfigDataLocationResolver - Skipping missing resource classpath:/config/application-uat.properties
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataImporter - Considering resource class path resource [application-uat.properties] from location optional:classpath:/;optional:classpath:/config/
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataLoaders - Loading class path resource [application-uat.properties] using loader org.springframework.boot.context.config.StandardConfigDataLoader
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataImporter - Loaded resource class path resource [application-uat.properties] from location optional:classpath:/;optional:classpath:/config/
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataImporter - Considering resource class path resource [application.properties] from location optional:classpath:/;optional:classpath:/config/
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataImporter - Already loaded resource class path resource [application.properties] ignoring location optional:classpath:/;optional:classpath:/config/
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironmentContributors - Imported 1 resource [class path resource [application-uat.properties]]
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironmentContributors - Processed imports for of 2 contributors
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Applying config data environment contributions
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Adding imported property source 'Config resource 'class path resource [application-uat.properties]' via location 'optional:classpath:/''
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Adding imported property source 'Config resource 'class path resource [application.properties]' via location 'optional:classpath:/''
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Setting default profiles: [default]
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.config.ConfigDataEnvironment - Setting active profiles: [uat]
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7aaca91a, started on Wed Jul 15 11:22:21 IST 2026
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2026-07-15 11:22:21 [main] TRACE org.springframework.core.io.support.SpringFactoriesLoader - Loaded [org.springframework.beans.BeanInfoFactory] names: []
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Getting BeanInfo for class [org.springframework.context.annotation.ConfigurationClassPostProcessor]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Caching PropertyDescriptors for class [org.springframework.context.annotation.ConfigurationClassPostProcessor]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'applicationStartup' of type [org.springframework.core.metrics.ApplicationStartup]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'beanClassLoader' of type [java.lang.ClassLoader]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'beanExcludedFromAotProcessing' of type [boolean]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'beanNameGenerator' of type [org.springframework.beans.factory.support.BeanNameGenerator]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'class' of type [java.lang.Class]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'environment' of type [org.springframework.core.env.Environment]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'metadataReaderFactory' of type [org.springframework.core.type.classreading.MetadataReaderFactory]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'order' of type [int]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'problemReporter' of type [org.springframework.beans.factory.parsing.ProblemReporter]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'resourceLoader' of type [org.springframework.core.io.ResourceLoader]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'sourceExtractor' of type [org.springframework.beans.factory.parsing.SourceExtractor]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved module-path location pattern [com/example/demo/**/*.class] to resources []
+2026-07-15 11:22:21 [main] TRACE org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved module-path location pattern [com/example/demo/] to resources []
+2026-07-15 11:22:21 [main] TRACE org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved class path location [com/example/demo/] to resources [file [C:\Users\Ashish Yadav\Desktop\ankush workspace\Java_Practice_Program\ankushspring\demo\target\classes\com\example\demo]]
+2026-07-15 11:22:21 [main] TRACE org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\Users\Ashish Yadav\Desktop\ankush workspace\Java_Practice_Program\ankushspring\demo\target\classes\com\example\demo] for files matching pattern [**/*.class]
+2026-07-15 11:22:21 [main] TRACE org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:com/example/demo/**/*.class] to resources [file [C:\Users\Ashish Yadav\Desktop\ankush workspace\Java_Practice_Program\ankushspring\demo\target\classes\com\example\demo\DemoApplication.class]]
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Scanning file [C:\Users\Ashish Yadav\Desktop\ankush workspace\Java_Practice_Program\ankushspring\demo\target\classes\com\example\demo\DemoApplication.class]
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Ignored because not matching any filter: file [C:\Users\Ashish Yadav\Desktop\ankush workspace\Java_Practice_Program\ankushspring\demo\target\classes\com\example\demo\DemoApplication.class]
+2026-07-15 11:22:21 [main] TRACE org.springframework.core.io.support.SpringFactoriesLoader - Loaded [org.springframework.boot.autoconfigure.AutoConfigurationImportFilter] names: [org.springframework.boot.autoconfigure.condition.OnBeanCondition, org.springframework.boot.autoconfigure.condition.OnClassCondition, org.springframework.boot.autoconfigure.condition.OnWebApplicationCondition]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.core.io.support.SpringFactoriesLoader - Loaded [org.springframework.boot.autoconfigure.AutoConfigurationImportListener] names: [org.springframework.boot.autoconfigure.condition.ConditionEvaluationReportAutoConfigurationImportListener]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved module-path location pattern [messages.properties] to resources []
+2026-07-15 11:22:21 [main] TRACE org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved class path location [messages.properties] to resources []
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration$ResourceBundleCondition - Condition MessageSourceAutoConfiguration.ResourceBundleCondition on org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration did not match due to ResourceBundle did not find bundle with basename messages
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnClassCondition - Condition OnClassCondition on org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration matched due to @ConditionalOnClass found required class 'org.springframework.jmx.export.MBeanExporter'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnPropertyCondition - Condition OnPropertyCondition on org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration did not match due to @ConditionalOnBooleanProperty (spring.jmx.enabled=true) did not find property 'spring.jmx.enabled'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnPropertyCondition - Condition OnPropertyCondition on org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration did not match due to @ConditionalOnBooleanProperty (spring.application.admin.enabled=true) did not find property 'spring.application.admin.enabled'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnPropertyCondition - Condition OnPropertyCondition on org.springframework.boot.autoconfigure.aop.AopAutoConfiguration matched due to @ConditionalOnBooleanProperty (spring.aop.auto=true) matched
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnClassCondition - Condition OnClassCondition on org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration matched due to @ConditionalOnMissingClass did not find unwanted class 'org.aspectj.weaver.Advice'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnPropertyCondition - Condition OnPropertyCondition on org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration matched due to @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=true) matched
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnClassCondition - Condition OnClassCondition on org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$AspectJAutoProxyingConfiguration did not match due to @ConditionalOnClass did not find required class 'org.aspectj.weaver.Advice'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnClassCondition - Condition OnClassCondition on org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration matched due to @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnClassCondition - Condition OnClassCondition on org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorContextPropagationConfiguration did not match due to @ConditionalOnClass did not find required class 'io.micrometer.context.ContextSnapshot'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnClassCondition - Condition OnClassCondition on org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration matched due to @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnBeanCondition - Condition OnBeanCondition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration#propertySourcesPlaceholderConfigurer matched due to @ConditionalOnMissingBean (types: org.springframework.context.support.PropertySourcesPlaceholderConfigurer; SearchStrategy: current) did not find any beans
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer() with bean name 'propertySourcesPlaceholderConfigurer'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnPropertyCondition - Condition OnPropertyCondition on org.springframework.boot.autoconfigure.aop.AopAutoConfiguration matched due to @ConditionalOnBooleanProperty (spring.aop.auto=true) matched
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnClassCondition - Condition OnClassCondition on org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration matched due to @ConditionalOnMissingClass did not find unwanted class 'org.aspectj.weaver.Advice'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnPropertyCondition - Condition OnPropertyCondition on org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration matched due to @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=true) matched
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration.forceAutoProxyCreatorToUseClassProxying() with bean name 'forceAutoProxyCreatorToUseClassProxying'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnBeanCondition - Condition OnBeanCondition on org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration#applicationAvailability matched due to @ConditionalOnMissingBean (types: org.springframework.boot.availability.ApplicationAvailability; SearchStrategy: all) did not find any beans
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration.applicationAvailability() with bean name 'applicationAvailability'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnBeanCondition - Condition OnBeanCondition on org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration#defaultLifecycleProcessor matched due to @ConditionalOnMissingBean (names: lifecycleProcessor; SearchStrategy: current) did not find any beans
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration.defaultLifecycleProcessor() with bean name 'lifecycleProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration$GitResourceAvailableCondition - Condition ProjectInfoAutoConfiguration.GitResourceAvailableCondition on org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration#gitProperties did not match due to GitResource did not find git info at classpath:git.properties
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver - Searching for key 'spring.info.build.location:classpath:META-INF/build-info.properties' in PropertySource 'configurationProperties'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver - Searching for key 'spring.info.build.location:classpath:META-INF/build-info.properties' in PropertySource 'systemProperties'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver - Searching for key 'spring.info.build.location:classpath:META-INF/build-info.properties' in PropertySource 'systemEnvironment'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver - Searching for key 'spring.info.build.location:classpath:META-INF/build-info.properties' in PropertySource 'random'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver - Searching for key 'spring.info.build.location:classpath:META-INF/build-info.properties' in PropertySource 'Config resource 'class path resource [application-uat.properties]' via location 'optional:classpath:/''
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver - Searching for key 'spring.info.build.location:classpath:META-INF/build-info.properties' in PropertySource 'Config resource 'class path resource [application.properties]' via location 'optional:classpath:/''
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver - Searching for key 'spring.info.build.location:classpath:META-INF/build-info.properties' in PropertySource 'applicationInfo'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver - Could not find key 'spring.info.build.location:classpath:META-INF/build-info.properties' in any property source
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnResourceCondition - Condition OnResourceCondition on org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration#buildProperties did not match due to @ConditionalOnResource did not find resource '${spring.info.build.location:classpath:META-INF/build-info.properties}'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration.fileWatcher() with bean name 'fileWatcher'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration.sslPropertiesSslBundleRegistrar() with bean name 'sslPropertiesSslBundleRegistrar'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnBeanCondition - Condition OnBeanCondition on org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration#sslBundleRegistry matched due to @ConditionalOnMissingBean (types: org.springframework.boot.ssl.SslBundleRegistry,org.springframework.boot.ssl.SslBundles; SearchStrategy: all) did not find any beans
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration.sslBundleRegistry() with bean name 'sslBundleRegistry'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnClassCondition - Condition OnClassCondition on org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration matched due to @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$ThreadPoolTaskExecutorBuilderConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnBeanCondition - Condition OnBeanCondition on org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$ThreadPoolTaskExecutorBuilderConfiguration#threadPoolTaskExecutorBuilder matched due to @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskExecutorBuilder; SearchStrategy: all) did not find any beans
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$ThreadPoolTaskExecutorBuilderConfiguration.threadPoolTaskExecutorBuilder() with bean name 'threadPoolTaskExecutorBuilder'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnBeanCondition - Condition OnBeanCondition on org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilder matched due to @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) did not find any beans
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnThreadingCondition - Condition OnThreadingCondition on org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilder matched due to @ConditionalOnThreading found PLATFORM
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration.simpleAsyncTaskExecutorBuilder() with bean name 'simpleAsyncTaskExecutorBuilder'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnBeanCondition - Condition OnBeanCondition on org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilderVirtualThreads did not match due to @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder' simpleAsyncTaskExecutorBuilder
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$OnExecutorCondition - Condition TaskExecutorConfigurations.OnExecutorCondition on org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorConfiguration matched due to AnyNestedCondition 1 matched 1 did not; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ModelCondition @ConditionalOnProperty (spring.task.execution.mode=force) did not find property 'spring.task.execution.mode'; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ExecutorBeanCondition @ConditionalOnMissingBean (types: java.util.concurrent.Executor; SearchStrategy: all) did not find any beans
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnBeanCondition - Condition OnBeanCondition on org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$AsyncConfigurerWrapperConfiguration did not match due to @ConditionalOnBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans of type org.springframework.scheduling.annotation.AsyncConfigurer
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnBeanCondition - Condition OnBeanCondition on org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$AsyncConfigurerConfiguration matched due to @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$AsyncConfigurerConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$AsyncConfigurerConfiguration.applicationTaskExecutorAsyncConfigurer() with bean name 'applicationTaskExecutorAsyncConfigurer'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnThreadingCondition - Condition OnThreadingCondition on org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorConfiguration#applicationTaskExecutorVirtualThreads did not match due to @ConditionalOnThreading did not find VIRTUAL
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnThreadingCondition - Condition OnThreadingCondition on org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorConfiguration#applicationTaskExecutor matched due to @ConditionalOnThreading found PLATFORM
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorConfiguration.applicationTaskExecutor() with bean name 'applicationTaskExecutor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$BootstrapExecutorConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$BootstrapExecutorConfiguration.bootstrapExecutorAliasPostProcessor() with bean name 'bootstrapExecutorAliasPostProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnClassCondition - Condition OnClassCondition on org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration matched due to @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$ThreadPoolTaskSchedulerBuilderConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnBeanCondition - Condition OnBeanCondition on org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$ThreadPoolTaskSchedulerBuilderConfiguration#threadPoolTaskSchedulerBuilder matched due to @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskSchedulerBuilder; SearchStrategy: all) did not find any beans
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$ThreadPoolTaskSchedulerBuilderConfiguration.threadPoolTaskSchedulerBuilder() with bean name 'threadPoolTaskSchedulerBuilder'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$SimpleAsyncTaskSchedulerBuilderConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnBeanCondition - Condition OnBeanCondition on org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$SimpleAsyncTaskSchedulerBuilderConfiguration#simpleAsyncTaskSchedulerBuilder matched due to @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder; SearchStrategy: all) did not find any beans
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnThreadingCondition - Condition OnThreadingCondition on org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$SimpleAsyncTaskSchedulerBuilderConfiguration#simpleAsyncTaskSchedulerBuilder matched due to @ConditionalOnThreading found PLATFORM
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$SimpleAsyncTaskSchedulerBuilderConfiguration.simpleAsyncTaskSchedulerBuilder() with bean name 'simpleAsyncTaskSchedulerBuilder'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnBeanCondition - Condition OnBeanCondition on org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$SimpleAsyncTaskSchedulerBuilderConfiguration#simpleAsyncTaskSchedulerBuilderVirtualThreads did not match due to @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder; SearchStrategy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder' simpleAsyncTaskSchedulerBuilder
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnBeanCondition - Condition OnBeanCondition on org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$TaskSchedulerConfiguration did not match due to @ConditionalOnBean (names: org.springframework.scheduling.config.internalScheduledAnnotationProcessor; SearchStrategy: all) did not find any beans named org.springframework.scheduling.config.internalScheduledAnnotationProcessor
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.boot.autoconfigure.condition.OnBeanCondition - Condition OnBeanCondition on org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration#scheduledBeanLazyInitializationExcludeFilter did not match due to @ConditionalOnBean (names: org.springframework.scheduling.config.internalScheduledAnnotationProcessor; SearchStrategy: all) did not find any beans named org.springframework.scheduling.config.internalScheduledAnnotationProcessor
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'autoConfigurationReport'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'propertySourcesPlaceholderConfigurer'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'propertySourcesPlaceholderConfigurer'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'propertySourcesPlaceholderConfigurer'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.event.internalEventListenerProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.event.internalEventListenerProcessor'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'forceAutoProxyCreatorToUseClassProxying'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'forceAutoProxyCreatorToUseClassProxying'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'forceAutoProxyCreatorToUseClassProxying'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'bootstrapExecutorAliasPostProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'bootstrapExecutorAliasPostProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'bootstrapExecutorAliasPostProcessor'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.event.internalEventListenerFactory'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.event.internalEventListenerFactory'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Alias definition 'bootstrapExecutor' registered for name 'applicationTaskExecutor'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.internalConfigurationPropertiesBinder'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.context.internalConfigurationPropertiesBinder'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'propertySourcesPlaceholderConfigurer'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.context.internalConfigurationPropertiesBinder'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Getting BeanInfo for class [org.springframework.aop.framework.autoproxy.InfrastructureAdvisorAutoProxyCreator]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Caching PropertyDescriptors for class [org.springframework.aop.framework.autoproxy.InfrastructureAdvisorAutoProxyCreator]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'advisorAdapterRegistry' of type [org.springframework.aop.framework.adapter.AdvisorAdapterRegistry]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'applyCommonInterceptorsFirst' of type [boolean]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'beanClassLoader' of type [java.lang.ClassLoader]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'beanFactory' of type [org.springframework.beans.factory.BeanFactory]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'class' of type [java.lang.Class]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'customTargetSourceCreators' of type [[Lorg.springframework.aop.framework.autoproxy.TargetSourceCreator;]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'exposeProxy' of type [boolean]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'frozen' of type [boolean]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'interceptorNames' of type [[Ljava.lang.String;]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'opaque' of type [boolean]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'optimize' of type [boolean]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'order' of type [int]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'proxyClassLoader' of type [java.lang.ClassLoader]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'proxyTargetClass' of type [boolean]
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.aop.framework.autoproxy.defaultProxyConfig'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.aop.framework.autoproxy.defaultProxyConfig'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Getting BeanInfo for class [org.springframework.aop.framework.ProxyConfig]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Caching PropertyDescriptors for class [org.springframework.aop.framework.ProxyConfig]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'class' of type [java.lang.Class]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'exposeProxy' of type [boolean]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'frozen' of type [boolean]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'opaque' of type [boolean]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'optimize' of type [boolean]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.CachedIntrospectionResults - Found bean property 'proxyTargetClass' of type [boolean]
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.aop.framework.autoproxy.defaultProxyConfig'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.AnnotationConfigApplicationContext - No 'messageSource' bean, using [Empty MessageSource]
+2026-07-15 11:22:21 [main] TRACE org.springframework.context.annotation.AnnotationConfigApplicationContext - No 'applicationEventMulticaster' bean, using [SimpleApplicationEventMulticaster]
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'applicationTaskExecutor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'applicationTaskExecutor'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorConfiguration'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'threadPoolTaskExecutorBuilder'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'threadPoolTaskExecutorBuilder'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$ThreadPoolTaskExecutorBuilderConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$ThreadPoolTaskExecutorBuilderConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$ThreadPoolTaskExecutorBuilderConfiguration'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'threadPoolTaskExecutorBuilder' via factory method to bean named 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'threadPoolTaskExecutorBuilder'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'applicationTaskExecutor' via factory method to bean named 'threadPoolTaskExecutorBuilder'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'applicationTaskExecutor'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'applicationTaskExecutor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7216fb24: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,demoApplication,org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory,org.springframework.boot.autoconfigure.AutoConfigurationPackages,org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration,propertySourcesPlaceholderConfigurer,org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration,forceAutoProxyCreatorToUseClassProxying,org.springframework.boot.autoconfigure.aop.AopAutoConfiguration,org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration,applicationAvailability,org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration,org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor,org.springframework.boot.context.internalConfigurationPropertiesBinder,org.springframework.boot.context.properties.BoundConfigurationProperties,org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter,org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration,lifecycleProcessor,spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties,org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration,spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties,org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration,fileWatcher,sslPropertiesSslBundleRegistrar,sslBundleRegistry,spring.ssl-org.springframework.boot.autoconfigure.ssl.SslProperties,org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$ThreadPoolTaskExecutorBuilderConfiguration,threadPoolTaskExecutorBuilder,org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration,simpleAsyncTaskExecutorBuilder,org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$AsyncConfigurerConfiguration,applicationTaskExecutorAsyncConfigurer,org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorConfiguration,applicationTaskExecutor,org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$BootstrapExecutorConfiguration,bootstrapExecutorAliasPostProcessor,org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration,spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties,org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$ThreadPoolTaskSchedulerBuilderConfiguration,threadPoolTaskSchedulerBuilder,org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$SimpleAsyncTaskSchedulerBuilderConfiguration,simpleAsyncTaskSchedulerBuilder,org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration,spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.aop.framework.autoproxy.defaultProxyConfig]; root of factory hierarchy
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'demoApplication'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'demoApplication'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'demoApplication'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.AutoConfigurationPackages'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.AutoConfigurationPackages'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.AutoConfigurationPackages'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'propertySourcesPlaceholderConfigurer'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'forceAutoProxyCreatorToUseClassProxying'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'applicationAvailability'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'applicationAvailability'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'applicationAvailability'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.context.internalConfigurationPropertiesBinder'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Ignoring factory method [public static org.springframework.boot.validation.beanvalidation.MethodValidationExcludeFilter org.springframework.boot.validation.beanvalidation.MethodValidationExcludeFilter.byAnnotation(java.lang.Class,org.springframework.core.annotation.MergedAnnotations$SearchStrategy)] of bean 'org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter': org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter': Unsatisfied dependency expressed through method 'byAnnotation' parameter 1: Ambiguous argument values for parameter of type [org.springframework.core.annotation.MergedAnnotations$SearchStrategy] - did you specify the correct bean references as arguments?
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'lifecycleProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'lifecycleProcessor'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration'
+2026-07-15 11:22:21 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties'
+2026-07-15 11:22:21 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'lifecycleProcessor' via factory method to bean named 'spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'lifecycleProcessor'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration' via constructor to bean named 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.ssl-org.springframework.boot.autoconfigure.ssl.SslProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'spring.ssl-org.springframework.boot.autoconfigure.ssl.SslProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'spring.ssl-org.springframework.boot.autoconfigure.ssl.SslProperties'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration' via constructor to bean named 'org.springframework.context.annotation.AnnotationConfigApplicationContext@7aaca91a'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration' via constructor to bean named 'spring.ssl-org.springframework.boot.autoconfigure.ssl.SslProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.core.io.support.SpringFactoriesLoader - Loaded [org.springframework.core.io.ProtocolResolver] names: [org.springframework.boot.io.Base64ProtocolResolver]
+2026-07-15 11:22:22 [main] TRACE org.springframework.core.io.support.SpringFactoriesLoader - Loaded [org.springframework.boot.io.ApplicationResourceLoader$FilePathResolver] names: [org.springframework.boot.io.ClassPathResourceFilePathResolver, org.springframework.boot.web.context.reactive.FilteredReactiveWebContextResourceFilePathResolver, org.springframework.boot.web.context.servlet.ServletContextResourceFilePathResolver]
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'fileWatcher'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'fileWatcher'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'fileWatcher'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'sslPropertiesSslBundleRegistrar'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'sslPropertiesSslBundleRegistrar'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'fileWatcher'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'sslPropertiesSslBundleRegistrar' via factory method to bean named 'fileWatcher'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'sslPropertiesSslBundleRegistrar'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'sslBundleRegistry'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'sslBundleRegistry'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sslPropertiesSslBundleRegistrar'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sslPropertiesSslBundleRegistrar'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'sslBundleRegistry'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'spring.ssl-org.springframework.boot.autoconfigure.ssl.SslProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$ThreadPoolTaskExecutorBuilderConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'threadPoolTaskExecutorBuilder'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration' via constructor to bean named 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'simpleAsyncTaskExecutorBuilder'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'simpleAsyncTaskExecutorBuilder'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'simpleAsyncTaskExecutorBuilder'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$AsyncConfigurerConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$AsyncConfigurerConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$AsyncConfigurerConfiguration'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'applicationTaskExecutorAsyncConfigurer'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'applicationTaskExecutorAsyncConfigurer'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$AsyncConfigurerConfiguration'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'applicationTaskExecutorAsyncConfigurer' via factory method to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@7216fb24'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'applicationTaskExecutorAsyncConfigurer'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorConfiguration'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$BootstrapExecutorConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$BootstrapExecutorConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$BootstrapExecutorConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'bootstrapExecutorAliasPostProcessor'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$ThreadPoolTaskSchedulerBuilderConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$ThreadPoolTaskSchedulerBuilderConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$ThreadPoolTaskSchedulerBuilderConfiguration'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'threadPoolTaskSchedulerBuilder'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'threadPoolTaskSchedulerBuilder'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$ThreadPoolTaskSchedulerBuilderConfiguration'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'threadPoolTaskSchedulerBuilder' via factory method to bean named 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'threadPoolTaskSchedulerBuilder'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$SimpleAsyncTaskSchedulerBuilderConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$SimpleAsyncTaskSchedulerBuilderConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$SimpleAsyncTaskSchedulerBuilderConfiguration' via constructor to bean named 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$SimpleAsyncTaskSchedulerBuilderConfiguration'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'simpleAsyncTaskSchedulerBuilder'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'simpleAsyncTaskSchedulerBuilder'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$SimpleAsyncTaskSchedulerBuilderConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'simpleAsyncTaskSchedulerBuilder'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.framework.autoproxy.defaultProxyConfig'
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: com.example.demo.DemoApplication
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.springframework.boot.autoconfigure.aop.AopAutoConfiguration
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$ThreadPoolTaskExecutorBuilderConfiguration
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$AsyncConfigurerConfiguration
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorConfiguration
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$BootstrapExecutorConfiguration
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$ThreadPoolTaskSchedulerBuilderConfiguration
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$SimpleAsyncTaskSchedulerBuilderConfiguration
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.event.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.annotation.AnnotationConfigApplicationContext - Using LifecycleProcessor [org.springframework.context.support.DefaultLifecycleProcessor@61a5b4ae]
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'applicationTaskExecutor'
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'springBootLoggingLifecycle'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase -2147483647
+2026-07-15 11:22:22 [main] TRACE org.springframework.context.support.DefaultLifecycleProcessor - Starting bean 'springBootLoggingLifecycle' of type [org.springframework.boot.context.logging.LoggingApplicationListener$Lifecycle]
+2026-07-15 11:22:22 [main] DEBUG org.springframework.context.support.DefaultLifecycleProcessor - Successfully started bean 'springBootLoggingLifecycle'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 1073741823
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+
+============================
+CONDITIONS EVALUATION REPORT
+============================
+
+
+Positive matches:
+-----------------
+
+   AopAutoConfiguration matched:
+      - @ConditionalOnBooleanProperty (spring.aop.auto=true) matched (OnPropertyCondition)
+
+   AopAutoConfiguration.ClassProxyingConfiguration matched:
+      - @ConditionalOnMissingClass did not find unwanted class 'org.aspectj.weaver.Advice' (OnClassCondition)
+      - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
+
+   ApplicationAvailabilityAutoConfiguration#applicationAvailability matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.availability.ApplicationAvailability; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   LifecycleAutoConfiguration#defaultLifecycleProcessor matched:
+      - @ConditionalOnMissingBean (names: lifecycleProcessor; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   PropertyPlaceholderAutoConfiguration#propertySourcesPlaceholderConfigurer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.context.support.PropertySourcesPlaceholderConfigurer; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   SslAutoConfiguration#sslBundleRegistry matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.ssl.SslBundleRegistry,org.springframework.boot.ssl.SslBundles; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutionAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor' (OnClassCondition)
+
+   TaskExecutorConfigurations.AsyncConfigurerConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration matched:
+      - AnyNestedCondition 1 matched 1 did not; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ModelCondition @ConditionalOnProperty (spring.task.execution.mode=force) did not find property 'spring.task.execution.mode'; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ExecutorBeanCondition @ConditionalOnMissingBean (types: java.util.concurrent.Executor; SearchStrategy: all) did not find any beans (TaskExecutorConfigurations.OnExecutorCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutor matched:
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskExecutorConfigurations.ThreadPoolTaskExecutorBuilderConfiguration#threadPoolTaskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskSchedulingAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler' (OnClassCondition)
+
+   TaskSchedulingConfigurations.SimpleAsyncTaskSchedulerBuilderConfiguration#simpleAsyncTaskSchedulerBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskSchedulingConfigurations.ThreadPoolTaskSchedulerBuilderConfiguration#threadPoolTaskSchedulerBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskSchedulerBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   AopAutoConfiguration.AspectJAutoProxyingConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.aspectj.weaver.Advice' (OnClassCondition)
+
+   JmxAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.jmx.enabled=true) did not find property 'spring.jmx.enabled' (OnPropertyCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.jmx.export.MBeanExporter' (OnClassCondition)
+
+   MessageSourceAutoConfiguration:
+      Did not match:
+         - ResourceBundle did not find bundle with basename messages (MessageSourceAutoConfiguration.ResourceBundleCondition)
+
+   ProjectInfoAutoConfiguration#buildProperties:
+      Did not match:
+         - @ConditionalOnResource did not find resource '${spring.info.build.location:classpath:META-INF/build-info.properties}' (OnResourceCondition)
+
+   ProjectInfoAutoConfiguration#gitProperties:
+      Did not match:
+         - GitResource did not find git info at classpath:git.properties (ProjectInfoAutoConfiguration.GitResourceAvailableCondition)
+
+   SpringApplicationAdminJmxAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.application.admin.enabled=true) did not find property 'spring.application.admin.enabled' (OnPropertyCondition)
+
+   TaskExecutorConfigurations.AsyncConfigurerWrapperConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans of type org.springframework.scheduling.annotation.AsyncConfigurer (OnBeanCondition)
+
+   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilderVirtualThreads:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder' simpleAsyncTaskExecutorBuilder (OnBeanCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutorVirtualThreads:
+      Did not match:
+         - @ConditionalOnThreading did not find VIRTUAL (OnThreadingCondition)
+
+   TaskExecutorConfigurations.TaskExecutorContextPropagationConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.micrometer.context.ContextSnapshot' (OnClassCondition)
+
+   TaskSchedulingAutoConfiguration#scheduledBeanLazyInitializationExcludeFilter:
+      Did not match:
+         - @ConditionalOnBean (names: org.springframework.scheduling.config.internalScheduledAnnotationProcessor; SearchStrategy: all) did not find any beans named org.springframework.scheduling.config.internalScheduledAnnotationProcessor (OnBeanCondition)
+
+   TaskSchedulingConfigurations.SimpleAsyncTaskSchedulerBuilderConfiguration#simpleAsyncTaskSchedulerBuilderVirtualThreads:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder; SearchStrategy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder' simpleAsyncTaskSchedulerBuilder (OnBeanCondition)
+
+   TaskSchedulingConfigurations.TaskSchedulerConfiguration:
+      Did not match:
+         - @ConditionalOnBean (names: org.springframework.scheduling.config.internalScheduledAnnotationProcessor; SearchStrategy: all) did not find any beans named org.springframework.scheduling.config.internalScheduledAnnotationProcessor (OnBeanCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+
+    org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration
+
+    org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
+
+    org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
+
+    org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
+
+    org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+
+
+
+2026-07-15 11:22:22 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 0.98 seconds (process running for 1.364)
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'applicationAvailability'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.boot.availability.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+2026-07-15 11:22:22 [main] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'applicationAvailability'
+2026-07-15 11:22:22 [main] DEBUG org.springframework.boot.availability.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2026-07-15 11:22:22 [SpringApplicationShutdownHook] DEBUG org.springframework.context.annotation.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7aaca91a, started on Wed Jul 15 11:22:21 IST 2026
+2026-07-15 11:22:22 [SpringApplicationShutdownHook] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'applicationTaskExecutor'
+2026-07-15 11:22:22 [SpringApplicationShutdownHook] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+2026-07-15 11:22:22 [SpringApplicationShutdownHook] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'applicationTaskExecutor'
+2026-07-15 11:22:22 [SpringApplicationShutdownHook] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'springBootLoggingLifecycle'
+2026-07-15 11:22:22 [SpringApplicationShutdownHook] DEBUG org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 1073741823
+2026-07-15 11:22:22 [SpringApplicationShutdownHook] TRACE org.springframework.context.support.DefaultLifecycleProcessor - Asking bean 'applicationTaskExecutor' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] to stop
+2026-07-15 11:22:22 [SpringApplicationShutdownHook] DEBUG org.springframework.context.support.DefaultLifecycleProcessor - Bean 'applicationTaskExecutor' completed its stop procedure
+2026-07-15 11:22:22 [SpringApplicationShutdownHook] DEBUG org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase -2147483647
+2026-07-15 11:22:22 [SpringApplicationShutdownHook] TRACE org.springframework.context.support.DefaultLifecycleProcessor - Asking bean 'springBootLoggingLifecycle' of type [org.springframework.boot.context.logging.LoggingApplicationListener$Lifecycle] to stop
+2026-07-15 11:22:22 [SpringApplicationShutdownHook] DEBUG org.springframework.context.support.DefaultLifecycleProcessor - Bean 'springBootLoggingLifecycle' completed its stop procedure
+2026-07-15 11:22:22 [SpringApplicationShutdownHook] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7216fb24: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,demoApplication,org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory,org.springframework.boot.autoconfigure.AutoConfigurationPackages,org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration,propertySourcesPlaceholderConfigurer,org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration,forceAutoProxyCreatorToUseClassProxying,org.springframework.boot.autoconfigure.aop.AopAutoConfiguration,org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration,applicationAvailability,org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration,org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor,org.springframework.boot.context.internalConfigurationPropertiesBinder,org.springframework.boot.context.properties.BoundConfigurationProperties,org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter,org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration,lifecycleProcessor,spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties,org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration,spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties,org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration,fileWatcher,sslPropertiesSslBundleRegistrar,sslBundleRegistry,spring.ssl-org.springframework.boot.autoconfigure.ssl.SslProperties,org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$ThreadPoolTaskExecutorBuilderConfiguration,threadPoolTaskExecutorBuilder,org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration,simpleAsyncTaskExecutorBuilder,org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$AsyncConfigurerConfiguration,applicationTaskExecutorAsyncConfigurer,org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorConfiguration,applicationTaskExecutor,org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$BootstrapExecutorConfiguration,bootstrapExecutorAliasPostProcessor,org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration,spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties,org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$ThreadPoolTaskSchedulerBuilderConfiguration,threadPoolTaskSchedulerBuilder,org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$SimpleAsyncTaskSchedulerBuilderConfiguration,simpleAsyncTaskSchedulerBuilder,org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration,spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.aop.framework.autoproxy.defaultProxyConfig]; root of factory hierarchy
+2026-07-15 11:22:22 [SpringApplicationShutdownHook] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'fileWatcher': [sslPropertiesSslBundleRegistrar]
+2026-07-15 11:22:22 [SpringApplicationShutdownHook] TRACE org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking close() on bean with name 'fileWatcher'
+2026-07-15 11:22:22 [SpringApplicationShutdownHook] TRACE org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name 'applicationTaskExecutor'
+2026-07-15 11:22:22 [SpringApplicationShutdownHook] DEBUG org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2026-07-15 11:22:22 [SpringApplicationShutdownHook] TRACE org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory': [org.springframework.context.annotation.internalConfigurationAnnotationProcessor]

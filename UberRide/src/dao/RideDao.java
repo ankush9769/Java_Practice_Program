@@ -107,7 +107,7 @@ public class RideDao {
     public boolean acceptRide(long rideId,long driverId)throws SQLException{
         String sql = """
                 update rides set driver_id = ?,status = 'ACCEPTED'
-                where id = ? and status = 'REQUSTED'
+                where id = ? and status = 'REQUESTED'
                 """;
         try(Connection connection = DatabaseConnection.getConnection();
             PreparedStatement statement = connection.prepareStatement(sql)){
