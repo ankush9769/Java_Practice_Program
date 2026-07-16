@@ -1,0 +1,6 @@
+switch expression
+1. mappings one value to another
+2. returning values
+3. Enum constant handling
+4. error code mapping.
+5. role base configuration

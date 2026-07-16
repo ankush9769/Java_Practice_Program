@@ -32,7 +32,109 @@ even if implementation changes our code does not get affected
 2. debudge = developer debudgin         = sql generated
 3. info    = normal business event      = user login
 4. warn    = unexcepted event but application continues = retrying an action
-5. error   = failiur of the application =  database connection fail
+5. error   = failiur of the application =  database connection fails
+
+logging best practices for log
+1. log meaning full business events(order 101 created)
+2. use appropriate log levels (info for normal flow,warn for recoverable issues,error for failiurs etc...)
+3. use placeholders for unique id wise tracker we can  use logger.info
+4. always include exception while login error
+    logger.error("payment failed",e);
+5. include request id's in distributed system to trace a request across services
+6. avoid logging password , credit card number , authentication tokens or other sensitive data
+7. avoid accessive debu logging in production because it can impact performace and increase storage cast
+
+
+
+
+it is ability to understand what is happening inside the running application without modifying its code it helps ans question like
+1. why the application is running slow
+2. which request failes
+3. which service causes error
+4. how many user are affected
+
+observability build on 3 pillers
+1) logs(detailed event record)
+2) matric = numerical measurement example == cpu uses , request count,avg request time etc...
+3) TRACE = end to end request flow across multiple services
+
+tools for rading loggs
+splunk
+graphana
+
+
+why logging matters in production(imageine a user paid 10k and his order is still pending)
+without loggs= you dont know when the payment receive ,
+               you cant determin wherthe the payment gateway rresponded or not,
+               you dont know id the stock reservation failed, finding the issue may be impossible,
+with logs
+     info -> payment received for 101.
+     info -> paymenbt successful for 101.
+     Error -> while deducting stock reservation for 101
+     warn -> order status moved to preding for 101
+
+
+
+production troubleshooting workflow
+1. identify the effected requested using a request Id, order id or customer id
+2. filter loggs by that id
+3. look for error and warn entries around the failiure time
+4. review the stack trace to identify source of exception 
+5. corelated loggs accross dependent services if the application is distributed
+6. verify matrix (CPU usage ,memory ,database latency) to see if infrastructure was the resion for this issuie 
+7. implement the the fix ,deployee it monitor new logs to confirm whether the problem is solved or not 
+
+
+
+why is soup() is unsuitable for the = 
+1. no log available
+2. can not disable message
+3. no timestamp
+4. no file logging
+5. no thread information
+
+what is SDF4J= it forwords the loggs to the actuall implementaion
+fasade = it is abstraction layer over different logging framework,it is design pattern which provides a single interface without a implementation
+
+
+what are the logging level
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

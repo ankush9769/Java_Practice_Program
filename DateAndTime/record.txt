@@ -1,0 +1,32 @@
+record feature was introduce in java 16 
+a record is special kind of class to design model  immutable - a class whoos primary porpose is to carry data
+for a record compiler automatically generate constructor,geter like accessor method ,equal method and hashcode and to string()
+
+
+compact constructor=
+instead of repeating the parameter we can only apply the login inside constructor
+
+log vs 
+record is java feature where Lombok is third party library,
+record are immutable by default while Lomboks are mutable.
+No dependency needs to be added for reacords and Lombok require dependency
+records has concise syntax,lombok is annotation based.
+reocrds are best option for DTO's
+
+
+limitation or records
+1. can not extends another class
+2. they implicitly final they can not be inharited
+3. instance fields are fixed based on record component so we can not add extra instance fields
+4. suitable for immutable for data carriers not with entities with changing data
+   use records for 
+   1. API require or response DTO's
+   2. read only configuration object
+   3. event payloads (kafka)
+   4. value objects 
+   5. data base projection result
+   6. avoid records for JPA entities
+   7. classes with significant business login
+   8. object whos state changes over time
+
+# pattern matching for instanceof(JDK 16)

@@ -1,0 +1,27 @@
+Date and time API
+
+problem with older APIs
+java.util.date
+java.util.calendar
+simpleDateFormat
+
+above classes are problem
+
+1. mutable 
+2. assigning month
+3. f
+
+
+
+
+
+
+
+1. local Date : stores only date
+2. local time : stores only time
+3. localDateTime : stores both date time
+4. zoneDateTime : give both data and time based on zone
+5. Instant: for timestamp
+6. duration : time difference
+7. period: Date difference
+8. DateTimeFormatter: for format

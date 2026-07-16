@@ -1,0 +1,41 @@
+var
+var allow java compiler to automatically determine / type inference   
+the type of local variable form the value assign to
+this has not impact on performance because var is only compile time feature
+var was introduce for large generic declaration which were difficult to read this does not make java dynamically type language, java is still is statically type language
+
+-> In which case var is used?
+
+var with loops is allowed
+var with stream is allowed
+var with try with resources is allowed.
+
+-> Placed where var cannot be used.
+
+cannot use in class scope variable
+
+cannot use with null assignment
+cant use with method  params 
+cannot use it with method return type .
+
+use to hold return values of variable 
+
+# Best Practices to use var
+
+1. Use var when the type is obvious from RHS initialization.
+2. Use var with long generic declaration.
+3. Use var inside loops.
+4. Avoid var of it reduces redability.
+
+var does not affect on performance.
+
+switch expression 
+problem with older switch case 
+1. required multiple break statments
+2. easier to fall under fall through
+3. could not directly return value
+
+advantage of modern switch 
+1. more consise
+2. easier to read 
+3. able to return value
