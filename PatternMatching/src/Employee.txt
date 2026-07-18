@@ -1,0 +1,3 @@
+101 Rohit Java 50000
+102 Amit Python 60000
+103 Rahul SQL 45000
