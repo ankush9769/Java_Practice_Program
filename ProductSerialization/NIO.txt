@@ -1,0 +1,82 @@
+works for images videos ,pdf , images zip file
+
+searlization
+
+it means converting a java object , into sequence of bytes so it can be stored in afile and can be sent over a 
+network 
+why serellization is needed
+a java obj exist only in jvm meomery when jvm stops meomery is clear 
+to preserve the obj transmitted we convert obj to bytes and then write it into disk or a network 
+
+real time uses searelization
+http session replication 
+it can be use for cache 
+messaging systems - framework such as kafka or rabitmq send obj data (often as json ) across services 
+the underline concept for this searlization
+saving game state 
+
+serialization vs json
+
+java serialization- java Specific                     Language independent
+binary format                                            txt format
+faster for java to java communication                 easier to read
+rearly used in rest api                   
+
+
+
+modern microservices typically exchange json , xml,protocol 
+
+
+JAVA NIO
+it was intro in jdk 
+to overcome limition tradition .java io package
+
+java io-reads one stream at time                java nio can handle multiple channel simultonesoly 
+blocking io                                    non blocking
+stream based                                    buffer and channel based 
+slower for large application                    design for high performance application
+
+NIO 
+instead of streams nio uses 
+1)channel 
+2) buffer
+3) selector (for non blocking io)
+1) channel is like a pipeline through which data flows 
+2) buffer - buffer is temporary meomery area where data is stored before application process it 
+3) selector-allows one thread to monitor multiple channels 
+
+
+
+#   private static final long serialversionUID=1L;
+it acts as a version identifier for the serialization class after serialization if we change any property in the for the serialize class it might get an exception while deserialization 
+without a compatible serialversionUID deserialization may fail with invalid class exception because the jvm detects that the class definition has been changes 
+
+# transient = some time we dont want to serialize sensitive field so to hide the actual value while deserialization we use transient keyword
+
+
+#                                                   serialization vs json
+     java serialization                                                       json
+   it is java specific                                                      language independebt
+   follows binary format                                                    text formate
+   faster for java to java communication                                    easier to read
+   Rarely used for rest api                                                 it is standard for rest api
+   
+
+
+#NIO  (new input output)
+it was introduce in java 4 version,  to overcome the limitation of IO package
+
+              java IO                                                   java NIO
+     java IO read one stream at time                                 java can bandle multiple channel simultanius
+     it follow bloking IO operation                                  NIO supports non bloking operation
+     stream based                                                    buffer and channel base
+     slower for large application                                    design for high performace application 
+     
+
+
+java NIO = instead of streams NIO uses 
+1) channel= a channel is like a pipeline through which data flows
+2) buffer= it is temporary memory where data is store before your application proccesse
+3) selector= a selector allow one thread to monitor multiple channels 
+
+

@@ -1,0 +1,4 @@
+INFO - the is info statment  ----
+WARN - this is warning ----
+INFO - again another log info file ----
+ERROR - this is errro file ----

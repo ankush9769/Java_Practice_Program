@@ -1,0 +1,17 @@
+SERIALIZATION:
+Serialization means converting a java object into sequence of bytes so that it can be stored inside the file and can be shared over the network.
+
+WHY IS SERIALIZATION NEEDED?
+
+When a developer cerate a java object it only exist in jvm memory , when jvm stops memory is clear , to preserve that object or to transmit it we convert our object into bytes and it will further be convert into network supported form.
+
+Real time usage of Serealization
+
+1. HTTP Session replication.
+2. Cache- Distributed caches like APACHE ignite or Hazelcast serialize objects before storing that.
+
+3. Messaging system -
+
+Framework likes kafka or Rabbit MQ sent object data (often as json across services) the underline concept is still object serialization.
+
+4. Saving game state
