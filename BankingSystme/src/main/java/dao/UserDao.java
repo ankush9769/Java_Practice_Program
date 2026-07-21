@@ -74,14 +74,14 @@ public class UserDao {
             }
         }
     }
-//    public static User depositAmount(double amount,int id)throws SQLException{
-//        String sql = "update user set balance = (balance+ ?) where id = ?";
-//        try(Connection connection = DatabaseConnection.getConnection();
-//            PreparedStatement statement = connection.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS))
-//        {
-//            statement.setDouble(1,amount);
-//            statement.setInt(2,id);
-//        }
-//        return
-//    }
+    public static boolean depositAmount(double amount,int id)throws SQLException{
+        String sql = "update user set balance = balance+? where id = ?";
+        try(Connection connection = DatabaseConnection.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS))
+        {
+            statement.setDouble(1,amount);
+            statement.setInt(2,id);
+            return statement.executeUpdate()==1;
+        }
+    }
 }

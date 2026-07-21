@@ -28,7 +28,7 @@ public class AuthService {
         return UserDao.findByEmailAndPassword(email,PasswordUtil.hash(password));
     }
 
-//    public static User deposit(double amount,int id)throws SQLException{
-//        return UserDao.depositAmount(amount,id);
-//    }
+    public static boolean deposit(double amount,int id)throws SQLException{
+        return UserDao.depositAmount(amount,id);
+    }
 }

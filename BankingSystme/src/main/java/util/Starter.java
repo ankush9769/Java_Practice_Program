@@ -102,6 +102,11 @@ public class Starter {
     public static void deposit(int id)throws SQLException{
         System.out.println("deposit amount:");
         double depositamount = sc.nextDouble();
-//        User user = AuthService.deposit(depositamount,id);
+        boolean isdeposit = AuthService.deposit(depositamount,id);
+        if(isdeposit){
+            System.out.println("deposite amount successfuly ");
+        }else{
+            System.out.println("failed to deposit");
+        }
     }
 }
