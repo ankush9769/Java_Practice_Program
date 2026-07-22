@@ -84,4 +84,28 @@ public class UserDao {
             return statement.executeUpdate()==1;
         }
     }
+    public static boolean withdrawAmount(double amount,int id)throws SQLException{
+        String sql = "update user set balance = balance-? where id = ?";
+        try(Connection connection = DatabaseConnection.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS))
+        {
+            statement.setDouble(1,amount);
+            statement.setInt(2,id);
+            return statement.executeUpdate()==1;
+        }
+    }
+    public static double checkBalance(int id)throws SQLException{
+        String sql = "select balance from user where id = ?";
+        try(Connection connection = DatabaseConnection.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS)){
+            statement.setInt(1,id);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()){
+                return resultSet.getDouble("balance");
+            }else{
+                throw new SQLException("User not found");
+            }
+
+        }
+    }
 }

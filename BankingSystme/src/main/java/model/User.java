@@ -12,6 +12,39 @@ public class User {
     private int id;
     private String name;
     private String email;
+
+    public int getAccountno() {
+        return accountno;
+    }
+
+    public void setAccountno(int accountno) {
+        this.accountno = accountno;
+    }
+
+    public String getIfsc() {
+        return ifsc;
+    }
+
+    public void setIfsc(String ifsc) {
+        this.ifsc = ifsc;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
     private int accountno;
     private String ifsc;
     private String branch;

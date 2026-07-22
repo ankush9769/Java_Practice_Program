@@ -1,10 +1,14 @@
 package service;
 
+import dao.AdminDao;
+import dao.TransactionDao;
 import dao.UserDao;
+import model.Transaction;
 import model.User;
 import util.PasswordUtil;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class AuthService {
     private final UserDao userDao;
@@ -30,5 +34,20 @@ public class AuthService {
 
     public static boolean deposit(double amount,int id)throws SQLException{
         return UserDao.depositAmount(amount,id);
+    }
+    public static boolean withdraw(double amount,int id)throws SQLException{
+        return UserDao.withdrawAmount(amount,id);
+    }
+    public static double checkBalance(int id)throws SQLException{
+        return UserDao.checkBalance(id);
+    }
+    public static List<User> findAllUsers() throws SQLException {
+        return AdminDao.findAllUsers();
+    }
+    public static List<Transaction> findTransactions() throws SQLException {
+        return AdminDao.findAllTransactions();
+    }
+    public static List<Transaction> transactionHistory(int id) throws SQLException {
+        return TransactionDao.transactionHistory(id);
     }
 }
