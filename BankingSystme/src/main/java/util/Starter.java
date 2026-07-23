@@ -53,6 +53,7 @@ public class Starter {
         System.out.println("user login successfully with id:"+user.getId());
         if(user.getRole().equals("admin")){
             adminMenu(user);
+            return;
         }
         userMenu(user);
 
@@ -161,8 +162,11 @@ public class Starter {
             System.out.println("3. My profile");
             System.out.println("4. chech balance");
             System.out.println("5. transaction history");
+            System.out.println("6. resetPassword");
+            System.out.println("7. miniStatement");
             System.out.println("0. logout");
             int choice = sc.nextInt();
+            sc.nextLine();
             switch (choice){
                 case 1 ->{deposit(user.getId(),user);}
                 case 2 ->{withdraw(user.getId(),user);}
@@ -170,6 +174,8 @@ public class Starter {
                 case 4 ->{double bal =checkBalance(user.getId());
                     System.out.println("balance ="+bal);}
                 case 5 ->{transactionHistory(user);}
+                case 6 ->{resetPassword(user);}
+                case 7 ->{miniStatement(user);}
                 case 0 -> {
                     return;
                 }
@@ -185,18 +191,18 @@ public class Starter {
             boolean isdeposit = AuthService.deposit(depositamount,id);
             if(isdeposit){
                 System.out.println("deposite amount successfuly ");
+                Transaction transaction = new Transaction(
+                        user.getId(),
+                        Type.DEPOSIT,
+                        depositamount,
+                        user.getBalance(),
+                        Status.SUCCESSFUL,
+                        "deposite done"
+                );
+                TransactionDao.create(transaction);
             }else{
                 System.out.println("failed to deposit");
             }
-            Transaction transaction = new Transaction(
-                    user.getId(),
-                    Type.DEPOSIT,
-                    depositamount,
-                    user.getBalance(),
-                    Status.SUCCESSFUL,
-                    "deposite done"
-            );
-            TransactionDao.create(transaction);
         }else{
             System.out.println("enter +ve amount");
         }
@@ -211,20 +217,38 @@ public class Starter {
                 boolean iswithdraw = AuthService.withdraw(withdrawamount,id);
                 if(iswithdraw){
                     System.out.println("withdraw amount successfuly ");
+                    Transaction transaction = new Transaction(
+                            user.getId(),
+                            Type.WITHDRAW,
+                            withdrawamount,
+                            user.getBalance(),
+                            Status.SUCCESSFUL,
+                            "withdraw done"
+                    );
+                    TransactionDao.create(transaction);
                 }else{
                     System.out.println("failed to withdraw");
+                    Transaction transaction = new Transaction(
+                            user.getId(),
+                            Type.WITHDRAW,
+                            withdrawamount,
+                            user.getBalance(),
+                            Status.FAILED,
+                            "hitt the daily limit"
+                    );
+                    TransactionDao.create(transaction);
                 }
+            }else{
+                System.out.println("sorry !!! dont have sufficient amount");
                 Transaction transaction = new Transaction(
                         user.getId(),
                         Type.WITHDRAW,
                         withdrawamount,
                         user.getBalance(),
-                        Status.SUCCESSFUL,
-                        "withdraw done"
+                        Status.FAILED,
+                        "sufficient amount"
                 );
                 TransactionDao.create(transaction);
-            }else{
-                System.out.println("sorry !!! dont have sufficient amount");
             }
         }
         else{
@@ -246,15 +270,44 @@ public class Starter {
         System.out.println("Balance :" + user.getBalance());
     }
     private static void transactionHistory(User user) throws SQLException {
-
-        List<Transaction> transactions =
-                AuthService.transactionHistory(user.getId());
-
+        List<Transaction> transactions = AuthService.transactionHistory(user.getId());
         for (Transaction transaction : transactions) {
             System.out.println("Type : " + transaction.getType());
             System.out.println("Amount : " + transaction.getAmount());
             System.out.println("Status : " + transaction.getStatus());
             System.out.println("Reason : " + transaction.getReason());
         }
+    }
+    public static void resetPassword(User user) throws SQLException {
+        boolean isverify = AuthService.verifyPassword(user.getId(),readLine("enter password for verification: "));
+        if(isverify){
+            String newpassword = readLine("enter the new password ...." +
+                    "which follows following rules" +
+                    " minimum 8 characters, one digit, one uppercase letter.:");
+            boolean isresetpassword = AuthService.resetPassword(user.getId(),newpassword);
+            if(isresetpassword){
+                System.out.println("password updated successfully");
+            }else{
+                System.out.println("sorry !!! password couldn't update");
+            }
+
+        }else{
+            System.out.println("your password does not matched");
+        }
+    }
+    public  static void miniStatement(User user) throws SQLException {
+        System.out.println("on what basis you want miniStatments");
+        System.out.println("press 1. DEPOSIT");
+        System.out.println("press 2. WITHDRAW");
+        int statechoice = sc.nextInt();
+        List<Transaction> transactions = AuthService.miniStatement(user.getId(),statechoice);
+        for (Transaction transaction : transactions) {
+            System.out.println("Type : " + transaction.getType());
+            System.out.println("Amount : " + transaction.getAmount());
+            System.out.println("Status : " + transaction.getStatus());
+            System.out.println("Reason : " + transaction.getReason());
+        }
+
+
     }
 }

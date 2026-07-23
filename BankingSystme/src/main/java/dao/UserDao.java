@@ -1,12 +1,11 @@
 package dao;
 
 import config.DatabaseConnection;
+import model.Type;
 import model.User;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.LocalDate;
 
 public class UserDao {
     public static User createUser(String name,String email,int accountno,String ifsc ,String branch,String password)throws SQLException {
@@ -85,14 +84,35 @@ public class UserDao {
         }
     }
     public static boolean withdrawAmount(double amount,int id)throws SQLException{
-        String sql = "update user set balance = balance-? where id = ?";
+        final double limitamount = 80000;
+        String sql2 = "select sum(amount) as sumamount from transaction where userid = ? AND type = ? AND DATE(time) = ?";
         try(Connection connection = DatabaseConnection.getConnection();
-            PreparedStatement statement = connection.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS))
+            PreparedStatement statement = connection.prepareStatement(sql2))
         {
-            statement.setDouble(1,amount);
-            statement.setInt(2,id);
-            return statement.executeUpdate()==1;
+            statement.setInt(1,id);
+            statement.setString(2,Type.WITHDRAW.name());
+            statement.setDate(3, java.sql.Date.valueOf(LocalDate.now()));
+            ResultSet resultSet = statement.executeQuery();
+            if(resultSet.next()){
+                double sumamount = resultSet.getDouble("sumamount");
+                if (resultSet.wasNull()) {
+                    sumamount = 0;
+                }
+                if (sumamount + amount <= limitamount){
+                    String sql = "update user set balance = balance-? where id = ?";
+                    try(PreparedStatement statement2 = connection.prepareStatement(sql))
+                    {
+                        statement2.setDouble(1,amount);
+                        statement2.setInt(2,id);
+                        return statement2.executeUpdate()==1;
+                    }
+                }else{
+                    System.out.println("you hitt the daily limit 50000");
+                    return false;
+                }
+            }
         }
+        return false;
     }
     public static double checkBalance(int id)throws SQLException{
         String sql = "select balance from user where id = ?";
@@ -106,6 +126,33 @@ public class UserDao {
                 throw new SQLException("User not found");
             }
 
+        }
+    }
+    public static boolean verifyPassword(int id,String password) throws SQLException
+    {
+        String sql = "select password from user where id = ?";
+        try(Connection connection = DatabaseConnection.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql))
+        {
+            statement.setInt(1,id);
+            ResultSet resultSet = statement.executeQuery();
+            if(resultSet.next()){
+                String storedpassword = resultSet.getString("password");
+//                System.out.println("Stored : " + storedpassword);
+//                System.out.println("Entered: " + password);
+//                System.out.println(storedpassword.equals(password));
+                return storedpassword.equals(password);
+            }
+            return false;
+        }
+    }
+    public static boolean resetPassword(int id,String password)throws SQLException{
+        String sql = "update user set password= ? where id = ?";
+        try(Connection connection = DatabaseConnection.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)){
+            statement.setString(1,password);
+            statement.setInt(2,id);
+            return statement.executeUpdate()==1;
         }
     }
 }

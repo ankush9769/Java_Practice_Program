@@ -62,4 +62,25 @@ public class TransactionDao {
                 resultSet.getString("reason")
         );
     }
+
+
+    public static List<Transaction> miniStatement(int id,String type) throws SQLException {
+
+        List<Transaction> list = new ArrayList<>();
+
+        String sql = "select * from transaction where userid=? AND type = ? order by time desc limit 5";
+
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+            statement.setInt(1, id);
+            statement.setString(2,type);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                while (resultSet.next()) {
+                    list.add(map(resultSet));
+                }
+            }
+        }
+        return list;
+    }
 }

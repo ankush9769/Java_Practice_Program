@@ -15,5 +15,10 @@ desc user;
 select * from user;
 update user set password = 'ad3305807bf135826421983486ee45d0fb3733edafa364c383da9c0618026f99' where name = 'admin';
 update user set balance =balance+10000 where id = 2;
+
+update user set balance = 10000 where id = 4;
 commit;
 set autocommit = 1;
+select * from transaction;
+update user set password = '020f3b7221c209e3b753b12e58622949a9596cc5df07ea19858752cb8631cec0' where email = 'admin@gmail.com'
+desc transaction;

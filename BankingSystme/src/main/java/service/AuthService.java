@@ -4,6 +4,7 @@ import dao.AdminDao;
 import dao.TransactionDao;
 import dao.UserDao;
 import model.Transaction;
+import model.Type;
 import model.User;
 import util.PasswordUtil;
 
@@ -50,4 +51,24 @@ public class AuthService {
     public static List<Transaction> transactionHistory(int id) throws SQLException {
         return TransactionDao.transactionHistory(id);
     }
+    public static boolean verifyPassword(int id,String password)throws SQLException{
+        return UserDao.verifyPassword(id,PasswordUtil.hash(password));
+    }
+    public static boolean resetPassword(int id,String password)throws SQLException{
+        return UserDao.resetPassword(id,PasswordUtil.hash(password));
+    }
+    public static List<Transaction> miniStatement(int id,int statechoice)throws SQLException{
+        String type;
+        if (statechoice == 1) {
+            type = Type.DEPOSIT.name();
+        } else if (statechoice == 2) {
+            type = Type.WITHDRAW.name();
+        } else {
+            System.out.println("invalid input");
+            return null;
+        }
+        return TransactionDao.miniStatement(id,type);
+    }
+
+
 }
