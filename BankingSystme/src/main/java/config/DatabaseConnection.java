@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DatabaseConnection {
     private static final String url  =
-            "jdbc:mysql://localhost:3307/bankingsystem?allowPublicKeyRetrieval=true";
+            "jdbc:mysql://localhost:3306/bankingsystem?allowPublicKeyRetrieval=true";
     private static final String user = "root";
     private  static  final String  password = "";
     public  static Connection getConnection() throws SQLException {

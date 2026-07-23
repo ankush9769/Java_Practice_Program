@@ -45,8 +45,18 @@ public class AuthService {
     public static List<User> findAllUsers() throws SQLException {
         return AdminDao.findAllUsers();
     }
+    public static List<User> highestBalanceUser() throws SQLException {
+        return AdminDao.highestBalanceUser();
+    }
+    public static List<Transaction> transactionBetweenDate(String start,String end) throws SQLException {
+        return AdminDao.transactionBetweenDate(start,end);
+    }
+
     public static List<Transaction> findTransactions() throws SQLException {
         return AdminDao.findAllTransactions();
+    }
+    public static List<Transaction> AllfailTransaction() throws SQLException {
+        return AdminDao.AllfailTransaction();
     }
     public static List<Transaction> transactionHistory(int id) throws SQLException {
         return TransactionDao.transactionHistory(id);

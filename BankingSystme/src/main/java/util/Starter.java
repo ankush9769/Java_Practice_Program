@@ -103,14 +103,20 @@ public class Starter {
         try {
             while (true){
                 System.out.println("You are logged in into the account");
-                System.out.println("Press 1 for view all Users");
-                System.out.println("press 2 for view all transactions ");
+                System.out.println("Press 1. view all Users");
+                System.out.println("press 2. view all transactions ");
+                System.out.println("press 3. view all failed transaction");
+                System.out.println("press 4. view highest balance user");
+                System.out.println("press 5. view transactions between selected dates");
                 System.out.println("Press 0 for logout");
                 int choice = readInt("Choice: ");
 
                 switch (choice){
                     case 1->viewUsers();
                     case 2-> viewAllTransactions();
+                    case 3-> viewAllFailTransaction();
+                    case 4-> highestBalanceUser();
+                    case 5 ->transactionBetweenDate();
                     case 0 -> {return;}
                     default -> System.out.println("Invalid Option");
                 }
@@ -135,6 +141,46 @@ public class Starter {
     }
     private static void viewAllTransactions() throws SQLException {
         AuthService.findTransactions().forEach(transaction ->
+                System.out.printf(
+                        "User Id=%d, Type=%s, Amount=%.2f, Balance After=%.2f, Status=%s, Reason=%s%n",
+                        transaction.getUserid(),
+                        transaction.getType(),
+                        transaction.getAmount(),
+                        transaction.getBalanceafter(),
+                        transaction.getStatus(),
+                        transaction.getReason()
+                )
+        );
+    }
+    private static void viewAllFailTransaction() throws SQLException{
+        AuthService.AllfailTransaction().forEach(transaction ->
+                System.out.printf(
+                        "User Id=%d, Type=%s, Amount=%.2f, Balance After=%.2f, Status=%s, Reason=%s%n",
+                        transaction.getUserid(),
+                        transaction.getType(),
+                        transaction.getAmount(),
+                        transaction.getBalanceafter(),
+                        transaction.getStatus(),
+                        transaction.getReason()
+                )
+        );
+    }
+    private static void highestBalanceUser() throws SQLException {
+        AuthService.highestBalanceUser().forEach(user ->
+                System.out.printf(
+                        "Id=%d, Name=%s, Email=%s, Account No=%d, Branch=%s, IFSC=%s, Balance=%.2f%n",
+                        user.getId(),
+                        user.getName(),
+                        user.getEmail(),
+                        user.getAccountno(),
+                        user.getBranch(),
+                        user.getIfsc(),
+                        user.getBalance()
+                )
+        );
+    }
+    private static void transactionBetweenDate() throws SQLException{
+        AuthService.transactionBetweenDate(readLine("enter start date"),readLine("enter end date")).forEach(transaction ->
                 System.out.printf(
                         "User Id=%d, Type=%s, Amount=%.2f, Balance After=%.2f, Status=%s, Reason=%s%n",
                         transaction.getUserid(),
