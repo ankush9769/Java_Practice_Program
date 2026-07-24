@@ -1,0 +1,54 @@
+jmm (java memory model)
+it defines how threads intract with memory and when changes make by one thread becomes visible to other threads
+its specifies 
+1. memory visibility
+2. ordering of operation
+3. synchronization
+
+volatile 
+what volatile garantees
+1. memory visibility
+2. happens before relationship
+3. difference between volatile and syncronizaiton 
+   visibility                      visibility + mutual exclusion
+   no lock involve                 uses lock
+   it is faster                    it is slow
+   no atomicity                    atomicity execution inside sycnonized block
+   best for flags                  best for shared mutable state
+   
+real world uses of volatile = 
+1. shut down flag
+2. configuraion(multiple thread immediately see multiple updated complecation)
+3. feature toggle
+4. operatoin changes every team immediately sees latest values
+5. caches refresh indicator
+
+
+
+# deadlock
+# starvation
+# livelocking
+
+
+
+#Reentranct lock
+ a thread that already owns the lock can acuire it again without getting it block
+reentranct lock is a class from  java.util.concureent.lock which is used to provide mutual execluasion (only one thread can execute critical section at a time)
+
+
+
+synchronous = using synconize we can not perform bellow action
+1. try for acquiring the lock for 2 second
+2. we can not intrupt waiting thread
+3. we can not check which thread owns the lock for fairness
+4. checking multiple condition
+
+
+
+
+reentranct 
+tryLock = thread will keep on trying to access the block. 
+
+
+
+assignment = learn about reentranct lock and there methods

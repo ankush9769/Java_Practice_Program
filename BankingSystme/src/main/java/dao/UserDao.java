@@ -84,7 +84,7 @@ public class UserDao {
         }
     }
     public static boolean withdrawAmount(double amount,int id)throws SQLException{
-        final double limitamount = 80000;
+        final double limitamount = 50000;
         String sql2 = "select sum(amount) as sumamount from transaction where userid = ? AND type = ? AND DATE(time) = ?";
         try(Connection connection = DatabaseConnection.getConnection();
             PreparedStatement statement = connection.prepareStatement(sql2))

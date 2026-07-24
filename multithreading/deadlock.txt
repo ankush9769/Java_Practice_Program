@@ -1,0 +1,17 @@
+deadlock
+deadlock acures when 2 ro more thread waits for ever for each othere to relese resource due to which non of thread can continue
+for condition that are required for a dead lock
+1. mutual exculsion
+2. hold and wait(thread which already owns the resource and waiting for other resourc)
+3. no preemption(resources ncan not be foreclly taken away)
+4. circular wait
+
+how to prevent deadlock
+1. acuire locks in same order 
+2. keep locks for sort time
+3. use reentranct lock with try lock
+
+deadlock detaction
+1. the visual VM= it shows thread stats , deadlock threads and CPU usages
+2. JSTACK = it shows thread name,locks held and waiting clocks
+3. JFR(java flight recorder) = it can detact deadlock,thread blocking , CPU usages and lock contation

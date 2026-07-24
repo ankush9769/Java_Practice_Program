@@ -330,13 +330,33 @@ public class Starter {
             String newpassword = readLine("enter the new password ...." +
                     "which follows following rules" +
                     " minimum 8 characters, one digit, one uppercase letter.:");
-            boolean isresetpassword = AuthService.resetPassword(user.getId(),newpassword);
-            if(isresetpassword){
-                System.out.println("password updated successfully");
-            }else{
-                System.out.println("sorry !!! password couldn't update");
+
+            boolean isUpper = false;
+            boolean islower = false;
+            boolean isDigit = false;
+
+            for (char ch : newpassword.toCharArray()) {
+                if (Character.isUpperCase(ch)){
+                    isUpper = true;
+                }
+                if (Character.isLowerCase(ch)) {
+                    islower = true;
+                }
+                if (Character.isDigit(ch)){
+                    isDigit=true;
+                }
             }
 
+            if (newpassword.length() >= 8 && isUpper && islower && isDigit) {
+                boolean isresetpassword = AuthService.resetPassword(user.getId(),newpassword);
+                if(isresetpassword){
+                    System.out.println("password updated successfully");
+                }else{
+                    System.out.println("sorry !!! password couldn't update");
+                }
+            } else {
+                System.out.println("password validation failed.");
+            }
         }else{
             System.out.println("your password does not matched");
         }
