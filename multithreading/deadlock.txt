@@ -15,3 +15,25 @@ deadlock detaction
 1. the visual VM= it shows thread stats , deadlock threads and CPU usages
 2. JSTACK = it shows thread name,locks held and waiting clocks
 3. JFR(java flight recorder) = it can detact deadlock,thread blocking , CPU usages and lock contation
+
+
+deamon thread = which runs authomaticaly
+callable always return something
+submit() = it will accept both runnable and callable 
+runnable = use when we dont want to return something
+callable = use when we want to return something and return type would be any thing ,return thing are store in future
+future = is simply tqke the return value and use only .get() method ,it does not perform chain action
+completable = the data that returned so we can apply chain operation on the returned data
+runnasync and supplyasync = will no block anything and return and getSync will block the  coming dat.
+
+
+#  thread pool =   (3,2,60)
+             mean (core threads,max thread,time(second))
+             core thread(3) = Core threads are already there. 
+             max thread(2)= Max threads are used when all the threads are busy. 
+             time(60 second) = Means the max threads that came will wait for 60 whether any other task is there or   not
+
+
+
+
+ 
