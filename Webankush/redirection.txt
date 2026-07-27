@@ -1,0 +1,15 @@
+redirection
+___________
+sendredirec- from my app jumping to different appln
+requesstDispatcher-> jumping to another url but on same page 
+
+
+post is slower than get as post take bulky data and is secure 
+
+request dispatcher only forward to page without any message.
+
+For maintaining session there are ways:
+1. Cookies
+2. Url Rewriting.
+3.Hidden fields
+4.Session
