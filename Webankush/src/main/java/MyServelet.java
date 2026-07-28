@@ -43,6 +43,7 @@ public class MyServelet extends HttpServlet {
         UserDao.create(name,username,hashPassword);
 
 
+
         String email = req.getParameter("email");
         out.println(
                 "<html>" +

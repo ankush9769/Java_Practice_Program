@@ -9,6 +9,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import util.PasswordUtil;
 
 @WebServlet("/Login")
@@ -35,10 +36,12 @@ public class Login extends HttpServlet {
         try {
             String name = UserDao.findByUsernameAndPassword(username, hashPassword);
             if (name != null) {
+                HttpSession session = req.getSession();
+                session.setAttribute("user",name);
+
                 req.setAttribute("username",name);
                 RequestDispatcher rd = req.getRequestDispatcher("profile.jsp");
                 rd.forward(req,resp);
-
             }else{
                 PrintWriter out = resp.getWriter();
                 out.println(
@@ -48,7 +51,6 @@ public class Login extends HttpServlet {
     "</body>" +
     "</html>"
 );
-
                 RequestDispatcher rd = req.getRequestDispatcher("Login.jsp");
 //                rd.forward(req,resp);
                 rd.include(req,resp);
