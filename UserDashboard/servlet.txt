@@ -1,0 +1,9 @@
+servlet
+
+session and contaxt = are similar but session store only session data and contaxt stores any property that we want to use any resource(servlet,html,xml,jsp)
+servlet config = it store the property which is accessible only by one resource, for example, servlet 
+eg.. If I have 10 servlet files then I can only use this config property in one servlet. 
+
+
+to learn
+JSTL, EL, Filter, servlet context, servlet config, tags in JSP 

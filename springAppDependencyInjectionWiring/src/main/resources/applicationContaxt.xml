@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean class="pojo.Address" id="addr1">      -->
+    <bean class="pojo.Address" id="addr">      <!-- in by name injection id=nameoffield(addr) -->
+
+
+<!--        through setter -->
+
+<!--        <property name="houseNO" value="101"/>-->
+<!--        <property name="roadNo" value="201"/>-->
+<!--        <property name="street" value="lalachaouk"/>-->
+
+<!--        through constructor-->
+
+        <constructor-arg value="101"/>
+        <constructor-arg value="201"/>
+        <constructor-arg value="lalachauk"/>
+    </bean>
+    <bean class="pojo.Student" id="std1" autowire="byName">
+        <property name="id" value="102"/>
+        <property name="name" value="shreya"/>
+        <property name="email" value="shreya@gmail.com"/>
+<!--        <property name="addr" ref="addr1"/>   -->
+        <property name="addr" /><!-- // by name injection... replace of autowired = "byName"-->
+    </bean>
+
+</beans>

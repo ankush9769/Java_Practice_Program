@@ -210,6 +210,8 @@ public class Starter {
             System.out.println("5. transaction history");
             System.out.println("6. resetPassword");
             System.out.println("7. miniStatement");
+            System.out.println("8. transfer amount");
+            System.out.println("9. add beneficiary");
             System.out.println("0. logout");
             int choice = sc.nextInt();
             sc.nextLine();
@@ -222,6 +224,8 @@ public class Starter {
                 case 5 ->{transactionHistory(user);}
                 case 6 ->{resetPassword(user);}
                 case 7 ->{miniStatement(user);}
+                case 8 ->{transferAmount(user);}
+                case 9 ->{manageBeneficiary(user);}
                 case 0 -> {
                     return;
                 }
@@ -373,7 +377,40 @@ public class Starter {
             System.out.println("Status : " + transaction.getStatus());
             System.out.println("Reason : " + transaction.getReason());
         }
-
-
     }
+    public static void transferAmount(User user){
+        System.out.println();
+    }
+    public static void manageBeneficiary(User user){
+        System.out.println("1. Add Beneficiary");
+        System.out.println("2. Update Beneficiary based on id");
+        System.out.println("3. Delete Beneficiary");
+        System.out.println("4. View Beneficiary");
+        System.out.println("0. Exit");
+        int choice =readInt("Choice: ");
+        switch (choice){
+            case 1-> addBeneficiary(user);
+            case 2 -> updateBeneficiary(user);
+            case 3 -> deleteBeneficiary(user);
+            case 4 -> viewBeneficiary(user);
+            case 0-> {
+                return;
+            }
+            default -> System.out.println("Invalid Choice");
+        }
+    }
+
+    private static void addBeneficiary(User user) throws SQLException {
+        String name = readLine("Name: ");
+        int acc = readInt("Account_no: ");
+        String ifsc = readLine("IFSC Code: ");
+        String nickname = readLine("Nickname: ");
+
+        Beneficiary beneficiary=  AuthService.createBeneficiary(name,acc,ifsc,nickname,users.getId());
+        if (beneficiary != null) {
+            System.out.println("Beneficiary created successfully...");
+        }
+    }
+
+
 }
