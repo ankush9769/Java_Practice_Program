@@ -1,21 +1,24 @@
 package entites;
+
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
-public class Question {
+public class QuestionOneToMany {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String question;
-    @OneToOne
-    private Answer answer;
+    @JoinTable(name = "QuestionAnswerJoin")
+    @OneToMany
+    private List<AnswerManyToOne> answer;
 
-
-    public Question(String question, Answer answer) {
-        this.question = question;
+    public void setAnswer(List<AnswerManyToOne> answer) {
         this.answer = answer;
     }
-    public Question(){}
+
+    public QuestionOneToMany(){}
 
     public int getId() {
         return id;
@@ -33,13 +36,6 @@ public class Question {
         this.question = question;
     }
 
-    public Answer getAnswer() {
-        return answer;
-    }
-
-    public void setAnswer(Answer answer) {
-        this.answer = answer;
-    }
 
 
 }

@@ -2,7 +2,7 @@ package entites;
 
 import jakarta.persistence.*;
 
-//@Table(name = "Users")
+@Table(name = "Users")
 @Entity
 public class User {
     @Override
@@ -20,7 +20,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name = "username")
+   // @Column(name = "username")
     private String name;
     private String email;
     private String password;

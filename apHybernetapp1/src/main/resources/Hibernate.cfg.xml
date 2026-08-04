@@ -17,5 +17,7 @@
         <mapping class="entites.Student"/>
         <mapping class="entites.Question"/>
         <mapping class="entites.Answer"/>
+        <mapping class="entites.QuestionOneToMany"/>
+        <mapping class="entites.AnswerManyToOne"/>
     </session-factory>
 </hibernate-configuration>
