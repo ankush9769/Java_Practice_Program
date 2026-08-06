@@ -1,4 +1,4 @@
 package com.zepto.example.controller;
 
-public class GroceryDao {
+public class FoodController {
 }

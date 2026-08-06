@@ -23,9 +23,9 @@ public class ClothingController {
     public void addAllClothing(@RequestBody List<Clothing> clothingList){
         clothingService.addAll(clothingList);
     }
-
+// @RequestParam(required = false)
     @GetMapping("/findbyid/{id}")
-    public Clothing get(@PathVariable int id){
+    public Clothing get( @PathVariable int id){
         return clothingService.get(id);
     }
 
