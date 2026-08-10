@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        form {
+            width: 400px;
+            margin: 50px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+<form th:action="@{/employees/save}"
+      th:object="${employee}"
+      method="post">
+    <h2>Employee Registration</h2>
+    <label for="name">Name</label>
+    <input type="text"
+           th:field="*{name}"
+           id="name"
+           name="name"
+           placeholder="Enter name">
+    <div style="color:red"
+    th:if="${#fields.hasErrors('name')}"
+    th:errors="*{name}"></div>
+
+    <label for="email">Email</label>
+    <input type="text"
+           th:field="*{email}"
+           id="email"
+           name="email"
+           placeholder="Enter email"
+           >
+    <div style="color:red"
+         th:if="${#fields.hasErrors('email')}"
+         th:errors="*{email}"></div>
+
+    <label for="password">Password</label>
+    <input type="password"
+           th:field="*{password}"
+           id="password"
+           name="password"
+           placeholder="Enter password">
+    <div style="color:red"
+         th:if="${#fields.hasErrors('password')}"
+         th:errors="*{password}"></div>
+
+    <label for="phoneNumber">Phone Number</label>
+    <input type="text"
+           th:field="*{phoneNumber}"
+           id="phoneNumber"
+           name="phoneNumber"
+           placeholder="Enter 10 digit phone number"
+           >
+    <div style="color:red"
+         th:if="${#fields.hasErrors('phoneNumber')}"
+         th:errors="*{phoneNumber}"></div>
+
+    <label for="age">Age</label>
+    <input type="text"
+           th:field="*{age}"
+           id="age"
+           name="age"
+           placeholder="Enter age">
+    <div style="color:red"
+         th:if="${#fields.hasErrors('age')}"
+         th:errors="*{age}"></div>
+
+    <label for="salary">Salary</label>
+    <input type="text"
+           th:field="*{salary}"
+           id="salary"
+           name="salary"
+           placeholder="Enter salary"
+           >
+    <div style="color:red"
+         th:if="${#fields.hasErrors('salary')}"
+         th:errors="*{salary}"></div>
+
+    <label for="department">Department</label>
+    <select th:field="*{department}" id="department" required>
+        <option value="">-- Select Department --</option>
+        <option value="IT">IT</option>
+        <option value="HR">HR</option>
+        <option value="Finance">Finance</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Sales">Sales</option>
+        <option value="Operations">Operations</option>
+    </select>
+    <div style="color:red"
+         th:if="${#fields.hasErrors('department')}"
+         th:errors="*{department}">
+    </div>
+
+    <button type="submit">Save Employee</button>
+
+
+</form>
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+
+</body>
+</html>
