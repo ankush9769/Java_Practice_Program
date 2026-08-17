@@ -51,7 +51,6 @@ public class AuthService {
     public static List<Transaction> transactionBetweenDate(String start,String end) throws SQLException {
         return AdminDao.transactionBetweenDate(start,end);
     }
-
     public static List<Transaction> findTransactions() throws SQLException {
         return AdminDao.findAllTransactions();
     }

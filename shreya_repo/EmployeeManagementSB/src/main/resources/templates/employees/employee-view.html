@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Details</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .navbar {
+            background-color: #343a40;
+            color: white;
+            padding: 18px 50px;
+        }
+
+        .navbar h2 {
+            margin: 0;
+        }
+
+        .container {
+            width: 600px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .container h2 {
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        .row {
+            padding: 14px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .label {
+            display: inline-block;
+            width: 150px;
+            font-weight: bold;
+        }
+
+        .status-active {
+            color: green;
+            font-weight: bold;
+        }
+
+        .status-inactive {
+            color: red;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 11px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="navbar">
+
+    <h2>Employee Management System</h2>
+
+</div>
+
+
+<div class="container">
+
+    <h2>Employee Details</h2>
+
+
+    <!-- ID -->
+    <div class="row">
+
+        <span class="label">
+            ID:
+        </span>
+
+        <span th:text="${employee.id}">
+        </span>
+
+    </div>
+
+
+    <!-- FIRST NAME -->
+    <div class="row">
+
+        <span class="label">
+            First Name:
+        </span>
+
+        <span th:text="${employee.firstName}">
+        </span>
+
+    </div>
+
+
+    <!-- LAST NAME -->
+    <div class="row">
+
+        <span class="label">
+            Last Name:
+        </span>
+
+        <span th:text="${employee.lastName}">
+        </span>
+
+    </div>
+
+
+    <!-- EMAIL -->
+    <div class="row">
+
+        <span class="label">
+            Email:
+        </span>
+
+        <span th:text="${employee.email}">
+        </span>
+
+    </div>
+
+
+    <!-- DEPARTMENT -->
+    <div class="row">
+
+        <span class="label">
+            Department:
+        </span>
+
+        <span th:text="${employee.department}">
+        </span>
+
+    </div>
+
+
+    <!-- DESIGNATION -->
+    <div class="row">
+
+        <span class="label">
+            Designation:
+        </span>
+
+        <span th:text="${employee.designation}">
+        </span>
+
+    </div>
+
+
+    <!-- SALARY -->
+    <div class="row">
+
+        <span class="label">
+            Salary:
+        </span>
+
+        <span th:text="${employee.salary}">
+        </span>
+
+    </div>
+
+
+    <!-- STATUS -->
+    <div class="row">
+
+        <span class="label">
+            Status:
+        </span>
+
+
+        <span th:if="${employee.active}"
+              class="status-active">
+
+            Active
+
+        </span>
+
+
+        <span th:unless="${employee.active}"
+              class="status-inactive">
+
+            Inactive
+
+        </span>
+
+    </div>
+
+
+    <!-- BACK BUTTON -->
+
+    <a th:href="@{/employees/showEmployees}"
+       class="btn">
+
+        ← Back to Employee List
+
+    </a>
+
+</div>
+
+</body>
+</html>

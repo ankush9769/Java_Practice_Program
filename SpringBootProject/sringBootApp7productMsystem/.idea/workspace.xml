@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ab318e6f-c4d5-4482-b519-65b6c691cb07" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../BankingSystme/src/main/java/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BankingSystme/src/main/java/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/.smarttomcat/UrlRelated/conf/catalina.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/.smarttomcat/UrlRelated/conf/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/.smarttomcat/UrlRelated/conf/jaspic-providers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/.smarttomcat/UrlRelated/conf/jaspic-providers.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/.smarttomcat/UrlRelated/conf/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/.smarttomcat/UrlRelated/conf/server.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/.smarttomcat/UrlRelated/conf/tomcat-users.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/.smarttomcat/UrlRelated/conf/tomcat-users.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/.smarttomcat/UrlRelated/conf/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/src/main/java/UrlRelated.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRelated/UrlRelated/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/.smarttomcat/UrlRewriting/conf/catalina.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/.smarttomcat/UrlRewriting/conf/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/.smarttomcat/UrlRewriting/conf/jaspic-providers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/.smarttomcat/UrlRewriting/conf/jaspic-providers.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/.smarttomcat/UrlRewriting/conf/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/.smarttomcat/UrlRewriting/conf/server.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/.smarttomcat/UrlRewriting/conf/tomcat-users.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/.smarttomcat/UrlRewriting/conf/tomcat-users.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/.smarttomcat/UrlRewriting/conf/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/src/main/java/Servlet1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/src/main/java/Servlet2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UrlRewriting/src/main/webapp/index.jsp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ankush9769&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ankush9769/Java_Practice_Program.git&quot;,
+    &quot;accountId&quot;: &quot;34cd0191-7a5b-41ec-afbf-3606fa534845&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3I1jVcB1qU96e3BnuIPYZKPea6A" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <setting name="addClasspath" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab318e6f-c4d5-4482-b519-65b6c691cb07" name="Changes" comment="" />
+      <created>1786938994230</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1786938994230</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

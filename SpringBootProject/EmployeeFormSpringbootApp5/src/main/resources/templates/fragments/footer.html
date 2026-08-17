@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Footer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .footer {
+            background: #1f2937;
+            color: #d1d5db;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .footer-title {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer-description {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .footer-line {
+            border: none;
+            height: 1px;
+            background: #374151;
+            margin: 20px 0;
+        }
+
+        .footer-copyright {
+            font-size: 13px;
+            color: #9ca3af;
+        }
+
+        .footer-tech {
+            margin-top: 8px;
+            font-size: 13px;
+        }
+
+        .footer-tech span {
+            color: #60a5fa;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<footer th:fragment="footer" class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-title">
+            Employee Management System
+        </div>
+
+        <p class="footer-description">
+            Manage employees efficiently and securely.
+        </p>
+
+        <hr class="footer-line">
+
+        <p class="footer-copyright">
+            &copy; 2026 Employee Management System. All Rights Reserved.
+        </p>
+
+        <p class="footer-tech">
+            Developed using
+            <span>Spring Boot</span> &amp;
+            <span>Thymeleaf</span>
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
+

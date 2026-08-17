@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title th:text="${pageTitle}">
+        Employee Form
+    </title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .navbar {
+            background-color: #343a40;
+            color: white;
+            padding: 18px 50px;
+        }
+
+        .navbar h2 {
+            margin: 0;
+        }
+
+        .container {
+            width: 600px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .container h2 {
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        input {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .error {
+            color: red;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checkbox-group input {
+            width: auto;
+        }
+
+        .checkbox-group label {
+            margin: 0;
+        }
+
+        .btn {
+            padding: 11px 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+            margin-left: 10px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="navbar">
+    <h2>Employee Management System</h2>
+</div>
+
+<div class="container">
+
+    <h2 th:text="${pageTitle}">
+        Employee Form
+    </h2>
+
+
+    <form th:action="@{${formAction}}"
+          th:object="${employee}"
+          method="post">
+
+
+        <!-- FIRST NAME -->
+        <div class="form-group">
+
+            <label for="firstName">
+                First Name
+            </label>
+
+            <input type="text"
+                   id="firstName"
+                   th:field="*{firstName}"
+                   placeholder="Enter first name">
+
+            <div class="error"
+                 th:if="${#fields.hasErrors('firstName')}"
+                 th:errors="*{firstName}">
+            </div>
+
+        </div>
+
+
+        <!-- LAST NAME -->
+        <div class="form-group">
+
+            <label for="lastName">
+                Last Name
+            </label>
+
+            <input type="text"
+                   id="lastName"
+                   th:field="*{lastName}"
+                   placeholder="Enter last name">
+
+            <div class="error"
+                 th:if="${#fields.hasErrors('lastName')}"
+                 th:errors="*{lastName}">
+            </div>
+
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="form-group">
+
+            <label for="email">
+                Email
+            </label>
+
+            <input type="email"
+                   id="email"
+                   th:field="*{email}"
+                   placeholder="Enter email">
+
+            <div class="error"
+                 th:if="${#fields.hasErrors('email')}"
+                 th:errors="*{email}">
+            </div>
+
+        </div>
+
+
+        <!-- DEPARTMENT -->
+        <div class="form-group">
+
+            <label for="department">
+                Department
+            </label>
+
+            <input type="text"
+                   id="department"
+                   th:field="*{department}"
+                   placeholder="Enter department">
+
+            <div class="error"
+                 th:if="${#fields.hasErrors('department')}"
+                 th:errors="*{department}">
+            </div>
+
+        </div>
+
+
+        <!-- DESIGNATION -->
+        <div class="form-group">
+
+            <label for="designation">
+                Designation
+            </label>
+
+            <input type="text"
+                   id="designation"
+                   th:field="*{designation}"
+                   placeholder="Enter designation">
+
+            <div class="error"
+                 th:if="${#fields.hasErrors('designation')}"
+                 th:errors="*{designation}">
+            </div>
+
+        </div>
+
+
+        <!-- SALARY -->
+        <div class="form-group">
+
+            <label for="salary">
+                Salary
+            </label>
+
+            <input type="number"
+                   id="salary"
+                   th:field="*{salary}"
+                   placeholder="Enter salary"
+                   step="0.01">
+
+            <div class="error"
+                 th:if="${#fields.hasErrors('salary')}"
+                 th:errors="*{salary}">
+            </div>
+
+        </div>
+
+
+        <!-- ACTIVE STATUS -->
+        <div class="form-group checkbox-group">
+
+            <input type="checkbox"
+                   id="active"
+                   th:field="*{active}">
+
+            <label for="active">
+                Active Employee
+            </label>
+
+        </div>
+
+
+        <!-- BUTTONS -->
+        <button type="submit"
+                class="btn btn-primary">
+
+            Save Employee
+
+        </button>
+
+
+        <a th:href="@{/employees/showEmployees}"
+           class="btn btn-secondary">
+
+            Cancel
+
+        </a>
+
+
+    </form>
+
+</div>
+
+</body>
+</html>
