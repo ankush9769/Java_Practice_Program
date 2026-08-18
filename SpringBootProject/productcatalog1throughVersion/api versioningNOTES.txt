@@ -1,0 +1,12 @@
+api versioning 
+--------------
+in api versioning 
+controller versioning means creating separate controller class for different api versions
+
+eg  version 1 =>   http://localhost:8080/v1
+    version 2 =>   http://localhost:8080/v2
+
+if we want to maintain different api calls for different clients we can separate the controllers.
+instead of modifying v1 and breaking existing client request we can keep v1 unchanged and introduced v2 as updated api
+so controller visioning is same as maintaining different controller for differ api version usually with version no. with url
+this approaches mainly useful when v1 must continue working with old client while v2 introduces new behavior or response structure
