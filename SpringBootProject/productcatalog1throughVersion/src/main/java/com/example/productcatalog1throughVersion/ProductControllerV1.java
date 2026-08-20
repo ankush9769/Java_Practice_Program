@@ -1,4 +1,4 @@
-package com.example.productcatalog1throughVersion.Controller;
+package com.example.productcatalog1throughVersion;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
