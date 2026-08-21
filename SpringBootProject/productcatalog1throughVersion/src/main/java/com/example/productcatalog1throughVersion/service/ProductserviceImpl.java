@@ -5,6 +5,7 @@ import com.example.productcatalog1throughVersion.entity.Product;
 import com.example.productcatalog1throughVersion.exception.ResourceNotFoundException;
 import com.example.productcatalog1throughVersion.repository.Productsrepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -41,6 +42,8 @@ public class ProductserviceImpl implements Productservice {
         return productsrepo.findByCategory(category);
     }
 
+
+    @Cacheable(value = "product",key = "#id")
     public Product findById(Long id){
         return productsrepo.findById(id)
                 .orElseThrow(()->new ResourceNotFoundException("Products not found"));

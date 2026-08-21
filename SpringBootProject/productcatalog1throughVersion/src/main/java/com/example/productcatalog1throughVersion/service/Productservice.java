@@ -13,6 +13,4 @@ public interface Productservice {
 
     List<Product> getByCategory(String category);
 
-
-
 }

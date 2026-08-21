@@ -1,4 +1,4 @@
-package com.example.productcatalog1throughVersion.config;
+package com.example.flightBookingSystmeSBapp10.config;
 
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;

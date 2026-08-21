@@ -28,7 +28,6 @@ public class ProductsController {
     IdempotencyService idempotencyService;
 
 
-    @Cacheable(value = "product",key = "#id")
     @GetMapping("/getAll")
     public ResponseEntity<APIresponse<Page<Product>>> getAll(@RequestParam(defaultValue = "0") int page,
                                                              @RequestParam(defaultValue = "5") int size){
@@ -63,14 +62,12 @@ public class ProductsController {
         return productservice.findById(id);
     }
 
-    @CacheEvict(value = "product",key = "#id")
     @DeleteMapping("/deleteById/{id}")
     public void deleteProduct(@PathVariable Long id){
         productservice.deleteById(id);
     }
 
 
-    @CachePut(value = "product",key = "#id")
     //write update controller
     @PutMapping("/update/{id}")
     public ResponseEntity<APIresponse<Product>> updateProduct(
