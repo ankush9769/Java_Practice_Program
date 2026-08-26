@@ -1,14 +1,17 @@
 package com.example.UserAuthenticaionSpringBootApp12.service;
 
-import com.example.UserAuthenticaionSpringBootApp12.dto.LoginRequestdto;
-import com.example.UserAuthenticaionSpringBootApp12.dto.UpdateRequestdto;
-import com.example.UserAuthenticaionSpringBootApp12.dto.UserRequestdto;
-import com.example.UserAuthenticaionSpringBootApp12.dto.UserResponsedto;
+import com.example.UserAuthenticaionSpringBootApp12.customeJWT.JwtService;
+import com.example.UserAuthenticaionSpringBootApp12.dto.*;
 import com.example.UserAuthenticaionSpringBootApp12.entity.UserAuth;
 import com.example.UserAuthenticaionSpringBootApp12.repo.UserRepo;
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -19,15 +22,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService{
-    @Autowired
-    UserRepo userRepo;
 
-    @Autowired
-    PasswordEncoder passwordEncoder;
-    @Autowired
-    ModelMapper modelMapper;
+    private final UserRepo userRepo;
 
+
+    private final PasswordEncoder passwordEncoder;
+
+    private final ModelMapper modelMapper;
+
+    private final JwtService jwtService;
+    private final AuthenticationManager authenticationManager;
 
 
     @Override
@@ -60,16 +66,17 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public UserResponsedto login(LoginRequestdto loginrequest) {
+    public LoginResponsedto login(LoginRequestdto loginrequest) {
+        try{
+            authenticationManager.authenticate(UsernamePasswordAuthenticationToken.unauthenticated(loginrequest.getEmail(),loginrequest.getPassword()));
+        }catch (AuthenticationException e){
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED,"invalid username password");
+        }
         UserAuth getuser = userRepo.findByEmailIgnoreCase(loginrequest.getEmail())
                 .orElseThrow(()->new UsernameNotFoundException("id password did not match"));
-        String storedpassword = getuser.getPassword();
-        UserResponsedto responsedto;
-        if(passwordEncoder.matches(loginrequest.getPassword(),storedpassword)){
-            responsedto = modelMapper.map(getuser,UserResponsedto.class);
-            return responsedto;
-        }
-        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED,"invalid credintial");
+        LoginResponsedto loginResponsedto = modelMapper.map(getuser,LoginResponsedto.class);
+        loginResponsedto.setToken(jwtService.generateToken(getuser.getEmail(),getuser.getRole()));
+        return loginResponsedto;
     }
 
     @Override

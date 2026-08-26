@@ -1,11 +1,9 @@
 package com.example.UserAuthenticaionSpringBootApp12.controller;
 
-import com.example.UserAuthenticaionSpringBootApp12.dto.LoginRequestdto;
-import com.example.UserAuthenticaionSpringBootApp12.dto.UpdateRequestdto;
-import com.example.UserAuthenticaionSpringBootApp12.dto.UserRequestdto;
-import com.example.UserAuthenticaionSpringBootApp12.dto.UserResponsedto;
+import com.example.UserAuthenticaionSpringBootApp12.dto.*;
 import com.example.UserAuthenticaionSpringBootApp12.service.UserServiceImpl;
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -15,13 +13,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/userauth")
 public class UserController {
-    @Autowired
-    UserServiceImpl userService;
 
-    @Autowired
-    UpdateRequestdto updateRequestdto;
+   private final UserServiceImpl userService;
+
+
 
 
     @GetMapping("/getting")
@@ -49,10 +47,9 @@ public class UserController {
 
 
     @PostMapping("/login")
-    public ResponseEntity<UserResponsedto> login(
-            @Valid
+    public ResponseEntity<LoginResponsedto> login(
             @RequestBody LoginRequestdto loginrequest){
-        UserResponsedto responsedto = userService.login(loginrequest);
+        LoginResponsedto responsedto = userService.login(loginrequest);
         return ResponseEntity.ok(responsedto);
     }
 

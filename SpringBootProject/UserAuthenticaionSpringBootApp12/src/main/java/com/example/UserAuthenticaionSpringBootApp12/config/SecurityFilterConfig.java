@@ -17,7 +17,13 @@ public class SecurityFilterConfig {
         httpSecurity.csrf(csrf->csrf.disable()); //
 
         httpSecurity.authorizeHttpRequests(request->//Allowing all the users for registration
-                request.requestMatchers("/userauth/registration").permitAll().anyRequest().authenticated()); //Register endpoint API कोई भी hit कर सकता है। उसके अलावा और कोई भी endpoint है तो वो authenticated होगा।
+                request.requestMatchers("/userauth/registration").permitAll()
+                        .requestMatchers("/userauth/login").permitAll()
+                        .requestMatchers("/userauth/me").authenticated()
+                        .requestMatchers("/userauth/findbyid/{id}").hasRole("ADMIN")
+                        .requestMatchers("/userauth/findall").hasRole("ADMIN")
+                        .anyRequest().authenticated())
+                ; //Register endpoint API कोई भी hit कर सकता है। उसके अलावा और कोई भी endpoint है तो वो authenticated होगा।
 
         httpSecurity.formLogin(Customizer.withDefaults());// browser -> form
         httpSecurity.httpBasic(Customizer.withDefaults());// postman -> httpbasic
