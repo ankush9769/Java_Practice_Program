@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>student fee</h2>
+
+    <form action="" name="form1">
+
+    Course:<select name="course" onchange="course1()">
+        <option value="-----">-----</option>
+        <option value="java">java</option>
+        <option value="maths" >maths</option>
+        <option value="react" >react</option>
+        <option value="python">python</option>
+    </select><br><br>
+
+   total fee: <input type="number" name="tfee"  readonly><br><br>
+
+    coata:
+    sc<input type="radio" value="sc" name="scinput" onclick="coata(1)">
+    st<input type="radio" value="st" name="scinput" onclick="coata(2)">
+    gen<input type="radio" value="gen" name="scinput" onclick="coata(3)"><br><br>
+
+    concession fee:<input id="cfee" type="number" readonly name="concession"><br><br>
+    paid amount: <input id="paidamount" type="number" name="paid"><br><br>
+    <input type="button" value="calculate" onclick="calculate()"> <br><br>
+    due amount: <input type="number" value="0" name="due">
+
+
+    </form>
+    
+
+
+    <script>
+        function course1(){
+            let courseid = form1.course.selectedIndex;
+            switch(courseid){
+                case 1: form1.tfee.value=5000;
+                break;
+
+                case 2: form1.tfee.value=6000;
+                break;
+
+                case 3:form1.tfee.value=7000;
+                break;
+
+                case 4: form1.tfee.value=8000;
+                break;
+
+                default:console.log("invalid input");
+            }
+        }
+        
+        function coata(i){
+            switch(i){
+                case 1: form1.concession.value=500;
+                break;
+                case 2: form1.concession.value=400;
+                break;
+                case 3: form1.concession.value=300;
+                default: console.log("invalid input");
+            }
+        }
+
+        function calculate(){
+            let tfee = form1.tfee.value;
+            let cfee = form1.concession.value;
+            let paidamount = form1.paid.value;
+
+            let dueamount = (tfee-cfee)-paidamount;
+            form1.due.value=dueamount;
+        }
+
+     
+
+
+    </script>
+</body>
+
+</html>

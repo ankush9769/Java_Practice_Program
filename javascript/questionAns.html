@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="form1">
+        <label for="question">Q1. who is as white as milk ???</label><br><br>
+        shreya<input  type="radio" name="answer" value="shreya" onclick="ans(1)">
+        prince<input  type="radio" name="answer" value="prince" onclick="ans(2)">
+        LED bulb<input  type="radio" name="answer" value="LED bulb" onclick="ans(3)">
+        wall putty<input  type="radio" name="answer" value="wall putty" onclick="ans(4)">
+        yash<input  type="radio" name="answer" value="yash" onclick="ans(5)"><br><br>
+
+        
+        <input id="submit" type="button" value="submit" name="submit" onclick="submits()">
+        <input id="next" type="button" value="next" name="next" disabled><br><br>
+
+        <div id="ans"></div>
+    </form>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById("submit").disabled=true;
+            document.getElementById("next").disabled=false;
+        }, 2000);
+
+
+        function submits(){
+            document.getElementById("submit").disabled=true;
+            document.getElementById("next").disabled=false; 
+        }
+        function ans(i){
+            switch(i){
+                case 1:document.getElementById("ans").innerHTML="you selelct option 1 : shreya"
+                break;
+
+                case 2:document.getElementById("ans").innerHTML="you selelct option 2 : prince"
+                break;
+
+                case 3:document.getElementById("ans").innerHTML="you selelct option 3 : LED bulb"
+                break;
+
+                case 4:document.getElementById("ans").innerHTML="you selelct option 4 : wall putty"
+                break;
+
+                case 5:document.getElementById("ans").innerHTML="you selelct option 5 : Yash"
+                break;
+
+                default: console.log("invalid ans")
+            }
+            
+
+        }
+    </script>
+</body>
+
+</html>

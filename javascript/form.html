@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="form">
+        <input type="number" name="num1" placeholder="num1">
+        <input type="number" name="num2" placeholder="num2"><br>
+        <br>
+        <input type="button" onclick="dosum()" value="add">
+        <input type="button" onclick="dosub()" value="sub">
+        <input type="button" onclick="domulti()" value="multi">
+        <input type="button" onclick="dodiv()" value="div">
+<br><br>
+        <div id="result">
+        </div>
+    </form>
+    <script>
+        
+        function dosum(){
+            let num1 = parseInt(form.num1.value)
+            let num2 = parseInt(form.num2.value)
+            let sum = num1+ num2
+            document.getElementById("result").innerHTML="sum:"+sum
+        }
+
+        function dosub(){
+            let num1 = parseInt(form.num1.value)
+            let num2 = parseInt(form.num2.value)
+            let sub = num1 - num2
+            document.getElementById("result").innerHTML="sub:"+sub
+        }
+
+         function domulti(){
+            let num1 = parseInt(form.num1.value)
+            let num2 = parseInt(form.num2.value)
+            let multi = num1 * num2
+            document.getElementById("result").innerHTML="multi:"+multi
+        }
+
+         function dodiv(){
+            let num1 = parseInt(form.num1.value)
+            let num2 = parseInt(form.num2.value)
+            let div = num1 / num2
+            document.getElementById("result").innerHTML="div:"+div
+        }
+        
+        
+
+    </script>
+</body>
+</html>
