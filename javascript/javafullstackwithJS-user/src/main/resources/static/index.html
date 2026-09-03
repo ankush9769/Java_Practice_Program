@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function fetchUser(){
+            fetch("/api/users")
+            .then(response => response.json())
+            .then(users=>{
+                document.getElementById("userlist").innerHTML=users
+                .map(user=>`<li>${user.name}-${user.email}<li>`)
+                    .join('');
+            })
+        }
+
+        function addUser(){
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+
+            fetch('/api/users',{
+                method:'POST',
+                headers:{'Content-Type':'application/json'},
+                body:JSON.stringify({name,email})
+            })
+            .then(()=>fetchUser())
+        }
+
+        document.addEventListener("DOMContentLoaded",function(){
+            fetchUser();
+        })
+    </script>
+</head>
+<body>
+    <h1>User list</h1>
+    <ul id="userlist"></ul>
+    <li></li>
+    <h1>user details</h1>
+    input name: <input type="text" id="name" name="name"><br>
+    input email: <input type="text" id="email" name="email"><br>
+    <input type="submit" value="submit" onclick="addUser()">
+
+
+
+
+
+</body>
+</html>
