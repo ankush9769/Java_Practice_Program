@@ -1,3 +1,4 @@
+<!-- Three ways to update the things in TypeScript  -->
 <hr>
 <p>events works!</p>
 <p>{{count()}}</p>
@@ -6,7 +7,105 @@
 <button (click)="reset()">increament</button>
 
 <br>
-<input (input)="updateusername($event.target.value)">
+<!-- <input (input)="updateusername($event.target.value)"> -->
+ <input (input)="username = $event.target.value"> <br>     <!-- Instead of calling methods for updating the username, we directly saved here. -->
 <h2>{{username}}</h2>   
+<br>
+
+<input #userInput placeholder="type email">
+<button (click)="updateEmail(userInput.value)">add email</button>
+<h2>{{useremail}}</h2>
+
+<hr>
+@if(isloggedIn)
+{
+    <h3>welcome user</h3>
+}
+@else{
+    <h3>please login</h3>
+}
+
+
+<hr>
+@if(marks>35){
+    <h3>pass</h3>
+}
+@else{
+    <h3>fail</h3>
+}
+
+<hr>
+<button (click)="toggel()">toggle</button>
+@if(showmessage){
+    <h2>details showing</h2>
+}
+@else{
+<div display="hidden"></div>
+}
+
+<hr>
+<button (click)="modemethod()">dark/light</button>
+<br>
+<!-- 
+<input type="number" (input)="age=$event.target.value" placeholder="enter age">
+@if(age>60)
+{
+    <h1>senior cetigen</h1>
+}@else if(age>18){
+    <h2>adult</h2>
+}@else if(age>13){
+    <h2>teenage</h2>
+}@else if(age>1){
+    <h2>child</h2>
+}@else{
+    <h2>invalid</h2>
+} -->
+
+
+
+@for(item of items;track $index){
+    <h3>{{item}}</h3>
+}
+<hr>
+@for(object of objects;track $index){
+    <h3>name={{object.name}}</h3>
+    <h3>age={{object.age}}</h3>
+    <button (click)="remove($index)">delete</button>
+}
+<hr>
+@if(numbers.length == 0){
+    <h2>list is empty</h2>
+}@else{
+    @for(num of numbers;track $index){
+        @if(num % 2 ==0){
+            <h3>{{num}} is even</h3>
+        }@else{
+            <h3>{{num}} is odd</h3>
+        }
+        <h3>{{$index}},{{$count}},{{$even}},{{$odd}},{{$first}},{{$last}}</h3>
+    }
+}
+
+<hr>
+<h3>{{companyname()}}</h3>
+<button (click)="switchcompany()">switch to alternate company</button>
+<hr>
+<h3>{{users().name}}</h3>
+<button (click)="setobject()">setobject</button>
+
+<hr>
+@for(num of numbers2();track $index){
+    <h3>{{num}}</h3>
+}
+
+<button (click)="addelement(8)">add 8</button>
+<button (click)="setarray()">set new array</button>
+<hr>
+
+<h3>single={{counts()}}</h3>
+<h3>double={{double()}}</h3>
+<h3>triple={{triple()}}</h3>
+<button (click)="increments()">increment</button>
+
 
 

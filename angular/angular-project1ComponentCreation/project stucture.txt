@@ -1,0 +1,70 @@
+project stucture
+src=this is most imp repository which contains the code which make your angular application
+main.ts = it is the entry point of your angular application
+
+src/app = this is where most of the your application code will leave
+components = an angular application this largly build from component
+eg..., navbar ,sidebar,product list ,footer component 
+each component controls a particular piece of ui
+app.ts (app.component)= this is your root component
+@component tell angular that this class represent an angular component
+default tag <app-root>                    -----
+
+app.html(app.compnent.html) = this contains html , browser displays this tamplate when a component is render
+app.css(app.component.css) = this contains style for the component modern angular component can use component scoped style meaning = style can be associated with that component rathere than automatically become global 
+
+index.html -> <app-root> -> app component  ->{app.ts,app.html,app.css}
+your application start with 
+main.ts -> bootstrap application -> app component -> app.html -> browser -> index.html
+
+
+
+package.json = it describe our entire project and its dependency
+node-module = 
+when we run npm install , npm downloads your project dependency into node-module folder
+
+angular.json = this is angular cli configuration ,it tells angular cli things abput our projet such as build configuration ,assets,styles, scripts ,developement configuration , production configuration
+tsConfig.json = angular uses type script , ts.config.json contain type script compilation ,it controls things related to type script compilation ,module configuration, compiler option, strictness
+
+
+
+# component
+the component is building block of an angular application 
+component = UI + Logic
+component lifecycle 
+1. component is created 
+2. input received
+3. initialization 
+4. changes
+5. component destroyed
+
+angular provides lifecycle hooks that allow us to execute code at specific stages
+1. ngOnChanges()
+2. ngOnInit()
+3. ngOnCheck()
+4. ngAfterContentInit()
+5. ngAfterContentchecked()
+6. ngAfterViewInit()
+7. ngAfterViewChecked()
+8. ngOnDestroy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
