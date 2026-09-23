@@ -1,0 +1,13 @@
+    <p>pipeline works!</p>
+    <h2>{{upper | uppercase}}</h2>
+    <h2>{{lower | lowercase}}</h2>
+    <h2>{{price | currency:'USD'}}</h2>
+    <h2>{{perc | percent}}</h2>
+    <h2>{{objects | json}}</h2>
+<h2>hjhjhjh</h2>
+    <h2>{{username | custompipe }}</h2>
+    <h2>{{role | customroleconverison}}</h2>
+    <h2>{{fullname | customfullnamesplitter}}</h2>
+    <!-- <input [(ngModel)]="username2" placeholder="two way binding"> -->
+     <input [value]="username2()" (input)="username2.set($event.target.value)" placeholder="two way binding">
+    <h2>{{username2()}}</h2>

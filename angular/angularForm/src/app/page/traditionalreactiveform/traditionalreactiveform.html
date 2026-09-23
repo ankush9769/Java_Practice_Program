@@ -1,0 +1,30 @@
+<p>traditionalreactiveform works!</p>
+<form [formGroup]="studentForm">
+    <div>
+        <label for="">Name:</label>
+        <input type="text" formControlName="name">
+        @if(studentForm.controls.name.touched){
+            @if(studentForm.controls.name.hasError('required')){
+                <small>name is required</small>
+            }
+            @if(studentForm.controls.name.hasError('minlength')){
+                <small>name should be minimum </small>
+            }
+            @if(studentForm.controls.name.hasError('maxlength')){
+                <small>name should be maximum </small>
+            }
+        }
+
+
+        <label>Password</label>
+        <input type="password" formControlName="password">
+        @if(studentForm.controls.password.touched){
+            @if(studentForm.controls.password.hasError('required')){
+                <small>password is required</small>
+            }
+            @if(studentForm.controls.password.hasError('minlength')){
+                <small>password must be atleat 6 character</small>
+            }
+        }
+    </div>
+</form>

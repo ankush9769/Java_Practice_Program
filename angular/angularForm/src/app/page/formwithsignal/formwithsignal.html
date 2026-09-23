@@ -1,0 +1,50 @@
+<p>formwithsignal works!</p>
+<div >
+    <form  (submit)="onSubmit($event)">
+        <div>
+            <label for="">name</label>
+                <input type="text" [formField]="studentForm.name">
+                @if(studentForm.name().touched()&&studentForm.name().invalid()){
+                    @for(
+                        error of studentForm.name().errors();
+                        track error.kind
+                    ){
+                        <small>{{error.message}}</small>
+                    }
+                }
+            
+        </div>
+        <div>
+            <label for="">
+                email
+            </label>
+            <input type="email" [formField]="studentForm.email">
+            @if(studentForm.email().touched()&& studentForm.email().invalid()){
+                @for(
+                        error of studentForm.email().errors();
+                        track error.kind
+                    ){
+                        <small>{{error.message}}</small>
+                    }
+            }
+        </div>
+
+        <div>
+            <label for="">
+                password
+            </label>
+            <input type="password" [formField]="studentForm.password">
+            @if(studentForm.password().touched()&& studentForm.password().invalid()){
+                @for(
+                        error of studentForm.password().errors();
+                        track error.kind
+                    ){
+                        <small>{{error.message}}</small>
+                    }
+            }
+        </div>
+        <button type="submit" [disabled]="studentForm().invalid()">register</button>
+    </form>
+    <h3>linve student model</h3>
+    <pre>{{studentModel | json}}</pre>
+</div>

@@ -1,0 +1,46 @@
+
+    <h1>Appointment Manager</h1>
+
+    <h2>Add New Appointment</h2>
+
+    <form id="appointmentForm">
+
+        <label for="description">Appointment Description:</label>
+        <input 
+            type="text" 
+            id="description" 
+            placeholder="Enter appointment description"
+            (input)="description.set($any($event.target).value)"
+            required
+        >
+
+        <br><br>
+
+        <label for="date">Appointment Date:</label>
+        <input 
+            type="date" 
+            id="date"
+            (input)="date.set($any($event.target).value)"
+            required
+        >
+
+        <br><br>
+
+        <button  (click)="addappoinment()">Add Appointment</button>
+
+    </form>
+
+    <h2>Appointments</h2>
+
+    @if(appoinment().length === 0){
+      <p>no appoinment is there</p>
+    }
+    @for(singleAP of appoinment(); track singleAP.id){
+      <div>
+        <div>
+          <h3>{{singleAP.description}}</h3>
+          <p>{{singleAP.date}}</p>
+        </div>
+        <button (click)="deleteappoinment(singleAP.id)">delete</button>
+      </div>
+    }

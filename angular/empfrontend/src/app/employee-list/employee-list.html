@@ -1,0 +1,18 @@
+<p>employee-list works!</p>
+<h3>Employee List</h3>
+@if(employees().length>0){
+    @for(employee of employees();track employee.id){
+        <div>
+            <hr>
+            <h3>{{employee.name}}</h3>
+            <p>
+                email:{{employee.email}}
+            </p>
+            <p>
+                department:{{employee.dept}}
+            </p>
+            <button (click)="delete(employee.id!)">delete</button>
+            <hr>
+        </div>
+    }
+}

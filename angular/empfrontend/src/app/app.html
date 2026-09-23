@@ -1,0 +1,7 @@
+<h2>welcome to employee portal</h2>
+<app-employee-form (employeeadded)="onEmployeeAdded($event)"></app-employee-form>
+
+<app-employee-list [employees]="employees()"
+                   (deleterequest)="onDeleteEmployee($event)">
+
+</app-employee-list>

@@ -1,0 +1,332 @@
+
+/* =========================================
+   PAGE
+========================================= */
+
+:host {
+  display: block;
+  min-height: 100vh;
+
+  padding: 50px 20px;
+
+  box-sizing: border-box;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(20, 184, 166, 0.35),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(6, 182, 212, 0.3),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 90%,
+      rgba(16, 185, 129, 0.3),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #022c2b,
+      #064e4a,
+      #083f3d,
+      #022c2b
+    );
+
+  background-attachment: fixed;
+}
+
+
+/* =========================================
+   Small Top Text
+========================================= */
+
+:host > p {
+  max-width: 500px;
+
+  margin: 0 auto 20px;
+
+  text-align: center;
+
+  color: rgba(204, 251, 241, 0.7);
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   Form Container
+========================================= */
+
+form {
+  width: 100%;
+  max-width: 500px;
+
+  margin: 0 auto;
+
+  padding: 35px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.16),
+      rgba(255, 255, 255, 0.06)
+    );
+
+  border: 1px solid rgba(153, 246, 228, 0.25);
+
+  border-radius: 22px;
+
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2),
+    0 0 35px rgba(20, 184, 166, 0.08);
+}
+
+
+/* =========================================
+   Form Fields
+========================================= */
+
+form > div {
+  margin-bottom: 25px;
+}
+
+
+/* =========================================
+   Labels
+========================================= */
+
+label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #d9fffa;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-transform: capitalize;
+}
+
+
+/* =========================================
+   Inputs
+========================================= */
+
+input {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 15px;
+
+  box-sizing: border-box;
+
+  color: #ecfffc;
+
+  background: rgba(2, 44, 43, 0.35);
+
+  border: 1px solid rgba(153, 246, 228, 0.25);
+
+  border-radius: 11px;
+
+  outline: none;
+
+  font-size: 15px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
+}
+
+
+/* =========================================
+   Placeholder
+========================================= */
+
+input::placeholder {
+  color: rgba(204, 251, 241, 0.45);
+}
+
+
+/* =========================================
+   Input Focus
+========================================= */
+
+input:focus {
+  background: rgba(13, 148, 136, 0.18);
+
+  border-color: rgba(94, 234, 212, 0.75);
+
+  box-shadow:
+    0 0 0 4px rgba(20, 184, 166, 0.12),
+    0 0 25px rgba(45, 212, 191, 0.18);
+}
+
+
+/* =========================================
+   Invalid Input
+========================================= */
+
+input.ng-invalid.ng-touched {
+  border-color: rgba(248, 113, 113, 0.7);
+
+  box-shadow:
+    0 0 0 3px rgba(248, 113, 113, 0.08);
+}
+
+
+/* =========================================
+   Validation Errors
+========================================= */
+
+small {
+  display: block;
+
+  margin-top: 7px;
+
+  padding-left: 3px;
+
+  color: #fda4af;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+/* =========================================
+   Register Button
+========================================= */
+
+button {
+  width: 100%;
+
+  height: 48px;
+
+  margin-top: 5px;
+
+  border: 1px solid rgba(153, 246, 228, 0.25);
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0d9488,
+      #0f766e,
+      #0891b2
+    );
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 25px rgba(13, 148, 136, 0.3);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* =========================================
+   Button Hover
+========================================= */
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #14b8a6,
+      #0d9488,
+      #06b6d4
+    );
+
+  box-shadow:
+    0 12px 30px rgba(20, 184, 166, 0.45);
+}
+
+
+/* =========================================
+   Button Active
+========================================= */
+
+button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+
+/* =========================================
+   Disabled Button
+========================================= */
+
+button:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.45;
+
+  background:
+    linear-gradient(
+      135deg,
+      #27635f,
+      #245c59
+    );
+
+  box-shadow: none;
+}
+
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 600px) {
+
+  :host {
+    padding: 30px 15px;
+  }
+
+  form {
+    padding: 25px 20px;
+
+    border-radius: 18px;
+  }
+
+  input {
+    height: 46px;
+  }
+
+  button {
+    height: 46px;
+  }
+}
+

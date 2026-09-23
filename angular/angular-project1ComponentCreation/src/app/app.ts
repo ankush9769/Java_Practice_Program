@@ -1,10 +1,13 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Register } from './register/register';
-import { Events } from './events/events';
+// import { Events } from './events/events';
+import { Effects } from './effects/effects';
+import { Pipeline } from './pipeline/pipeline';
+import { CustompipePipe } from './pipe/custompipe-pipe';
 
 @Component({
-  imports: [RouterOutlet,Register,Events],
+  imports: [RouterOutlet,Register,Effects,Pipeline,CustompipePipe],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',

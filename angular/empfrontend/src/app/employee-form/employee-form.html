@@ -1,0 +1,58 @@
+<p>employee-form works!</p>
+
+<form [formGroup]="employeeForm"
+      (ngSubmit)="onSubmit()">
+
+      <div>
+        <label for="name">Name</label>
+        <input type="text"
+               formControlName="name"
+               placeholder="enter employee name"
+        >
+
+        @if (
+            employeeForm.get('name')?.touched &&
+            employeeForm.get('name')?.invalid
+        ) {
+            <small>
+                name is required and must contains at least 3 character
+            </small>
+        }
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email"
+               formControlName="email"
+               placeholder="enter employee email"
+        >
+
+        @if (
+            employeeForm.get('email')?.touched &&
+            employeeForm.get('email')?.invalid
+        ) {
+            <small>
+                please enter valid email
+            </small>
+        }
+      </div>
+      <div>
+        <label for="dept">Department</label>
+        <input type="text"
+               formControlName="dept"
+               placeholder="enter employee dept"
+        >
+
+        @if (
+            employeeForm.get('dept')?.touched &&
+            employeeForm.get('dept')?.invalid
+        ) {
+            <small>
+                department is required
+            </small>
+        }
+      </div>
+      <button type="submit"
+              [disabled]="employeeForm.invalid">Register
+      </button>
+
+</form>
