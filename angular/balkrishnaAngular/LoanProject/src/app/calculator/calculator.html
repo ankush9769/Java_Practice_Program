@@ -1,0 +1,11 @@
+<p>calculator works!</p>
+<input type="number" [(ngModel)]="first" (input)="calc()">
+<input type="number" [(ngModel)]="second" (input)="calc()">
+
+choince <select (change)="calc()" [(ngModel)]="operation">
+  <option >+</option>
+  <option >-</option>
+  <option >*</option>
+  <option >/</option>
+</select>
+<H3>result :</H3>{{result}}
